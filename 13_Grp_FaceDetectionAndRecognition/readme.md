@@ -47,7 +47,7 @@ To Start the project there are three steps
     
 #  Contributers
 
-    Pranjul Pal(CSE-2022): 1805210035
-    Yash Jaiswal(CSE-2022): 1805210064
-    Ziyauddin(CSE-2022): 1805210067
+    Pranjul Pal(CSE-2022), Roll No: 1805210035, Mob: 7081258311, email: pranjulpal22@gmail.com
+    Yash Jaiswal(CSE-2022), Roll No: 1805210064, Mob: 7275136167, email: yashjaiswal895@gmail.com
+    Ziyauddin(CSE-2022), Roll No: 1805210067, Mob: 8890571069, email: ziyauddin270499@gmail.com
     
