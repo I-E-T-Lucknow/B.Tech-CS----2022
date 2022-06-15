@@ -25,8 +25,8 @@ Clone the repo
 Download and install python from https://www.python.org/downloads/
 Install and update pip to latest version
 
-Install requirements.txt file from "B.Tech-CS----2022/20_Grp_AutomaticImageCaptioning/code/image-captioning-website/" using 
-pip3 install -r requirements.text
+Install requirements.txt file from ### B.Tech-CS----2022/20_Grp_AutomaticImageCaptioning/code/image-captioning-website/ 
+using pip3 install -r requirements.text
 
 To start the application run app.py file
 >python3 app.py
