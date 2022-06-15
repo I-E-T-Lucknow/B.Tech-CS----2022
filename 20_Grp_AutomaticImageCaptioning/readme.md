@@ -1,4 +1,4 @@
-##Introduction:
+## Introduction:
 
 Image Captioning is the system of producing a textual description for given images.It has been an extremely important and basic endeavor in the 
 Deep Learning space. Picture subtitling has a major amount of use. NVIDIA is the usage of picture captioning applied sciences to create an software to assist human beings who have low or no eyesight.
@@ -19,7 +19,7 @@ Once model developed, the site is build on Flask framework which is a light-weig
 
 
 
-##Getting Started:
+## Getting Started:
 Clone the repo
 
 Download and install python from https://www.python.org/downloads/
@@ -35,7 +35,7 @@ Open http://127.0.0.1:5000 and you will be presented with a running application
 
 
 
-##To run training module
+## To run training module
 Clone the repo
 
 Download and install python from https://www.python.org/downloads/
@@ -49,7 +49,7 @@ run train.py using
 python3 train.py
 
 
-##The Team:
+## The Team:
 1. Ansh Lehri (Roll No :1805210008, Mobile No :6387415081, email :1805210008@ietlucknow.ac.in)
 2. Ashutosh Kumar Singh (Roll No :1805210013, Mobile No :8707046409, email :1805210013@ietlucknow.ac.in)
 3. Himanshu Verma (Roll No :1805210022, Mobile No :9125841136, email :1805210022@ietlucknow.ac.in)
