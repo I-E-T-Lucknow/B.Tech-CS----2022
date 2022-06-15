@@ -46,4 +46,6 @@ In case port is busy change the port number writting "python manage.py runserver
 
 ### Contributer
 Adarsh Gupta(CSE-2022) 1900520109001
+Km Jyoti(CSE-2022) 1900520109004
+Zainab Israr Ansari(CSE-2022) 1900520109006
 
