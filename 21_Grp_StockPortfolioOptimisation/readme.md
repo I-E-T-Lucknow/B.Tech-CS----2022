@@ -6,6 +6,8 @@ The Portfolio Allocation strategies being used:
 2. Risk Parity
 3. Markowitz Optimiser
 
+After we have calculated the covariance matrix and the expected returns for your portfolio we feed them into the simulator. Using the optimization methods you've selected, the code then calculates the optimal weights. Then a Monte Carlo simulation is performed, where optimal allocations are computed on a large number of simulated covariances and returns. It then compares these allocations to the ideal and calculates the error.
+
 ##Getting Started:
 Clone the repo
 
