@@ -1,0 +1,62 @@
+/* Please take a look at this video! https://www.youtube.com/watch?v=M7MuHxHI8Xc */
+@import url("https://fonts.googleapis.com/css2?family=Red+Rose:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("https://img.freepik.com/free-vector/hospital-building-healthcare-cartoon-background-vector-illustration-with-ambulance-car-doctor-patient-nurses-medical-clinic-exterior_2175-1515.jpg?w=2000");
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Red Rose", cursive;
+}
+
+.card {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  color: black;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  border-radius: 10px;
+  z-index: 1;
+  overflow: hidden;
+  border-color: black;
+  border-style: solid;
+  border-width: 3px;
+  background: white;
+  overflow-y: scroll;
+}
+
+.card img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.card .details {
+  margin: 10px;
+}
+
+.card .details h2 {
+  font-weight: 600;
+}
+
+.card .details p {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+#printButton {
+  border-radius: 16px;
+  width: 200px;
+  border-style: none;
+  height: 40px;
+}

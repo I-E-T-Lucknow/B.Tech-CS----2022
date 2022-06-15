@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='styles/result.css') }}"
+    />
+    <title>Heart Disease Predictor</title>
+    <script>
+      function printDiv(divName) {
+        window.print();
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Please take a look at this video! https://www.youtube.com/watch?v=M7MuHxHI8Xc -->
+
+    <div class="card">
+      <img
+        src="https://kims-app-server.s3.ap-south-1.amazonaws.com/images/blogs/329_1571993404.jpg"
+        alt="Image"
+      />
+      <div class="details">
+        <h2>{{result[2][0]}}</h2>
+        <br />
+        <p>{{result[2][1]}}</p>
+        <hr />
+      </div>
+      <p id="info"></p>
+      <h3 id="name"></h3>
+      <h3 id="email"></h3>
+      <hr>
+      <h3>Details Entered by you:</h3></br>
+      <table border="1">
+        {% for key, value in result[0].items() %}
+        <tr>
+          <th>{{ key }}</th>
+          <td>{{ value }}</td>
+        </tr>
+
+        {% endfor %}
+      </table>
+      <hr>
+      <h3>Overall Result: {{result[3]*100}}% chance that you have heart disease</h3>
+      <h3>Detailed Models Predictions:</h3></br>
+      <table border="1">
+        {% for key, value in result[1].items() %}
+
+        <tr>
+          <th>{{ key }}</th>
+          <td>{{ value }}</td>
+        </tr>
+
+        {% endfor %}
+      </table>
+      <input
+        id="printButton"
+        type="button"
+        onclick="printDiv()"
+        value="Click To Generate Report"
+      />
+    </div>
+  </body>
+  <script>
+    let name = localStorage.getItem("name");
+    let email = localStorage.getItem("email");
+    document.getElementById("name").innerHTML = name;
+    document.getElementById("email").innerHTML = email;
+  </script>
+</html>
