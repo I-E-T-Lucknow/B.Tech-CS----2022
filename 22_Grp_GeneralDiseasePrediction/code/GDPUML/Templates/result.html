@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{BASE_URL}}/static/css/bootstrap.min.css" rel="stylesheet">
+    <title>Result</title>
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+    <link href="{{BASE_URL}}/static/css/custom.css" rel="stylesheet">
+     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom Fonts from Google -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+table>tbody>tr>td{
+text-transform: uppercase;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+ .button{
+	text-transform:uppercase;
+}
+ .button{
+	width:100%;
+	color:#fff;
+	display:none;
+}
+.button{
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(255,255,255,.1);
+}
+.button{
+	background:#1e90ff;
+}
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+  cursor: pointer;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #e9e9e9;
+}
+
+.ins{
+color : black;
+text-shadow: blue 1px 0 10px;
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+#dp{
+text-shadow: 4px 2px 1px black, 0 0 1em blue, 0 0 0.2em blue;
+}
+#symptodiv{
+      font-family: cursive, sans-serif;
+      color: white;
+      padding: 10px;
+      margin:20px;
+      border-radius: 4px;
+      display:none;
+    }
+
+</style>
+</head>
+<body onload="load()">
+
+
+ <nav id="siteNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Logo and responsive toggle -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{% url 'dashBoard' %}" title="General Disease Prediction System">
+                	<span class="bi bi-activity"></span>
+                	GDPS
+                </a>
+            </div>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="">
+                        <a href="{% url 'previous' %}">Previous Disease</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                     <li>
+                        <a href="#">{{res.uname}}</a>
+                    </li>
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav>
+
+<!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1 id="dp">Disease Prediction</h1>
+
+
+                <p class="ins" style=" color : black;">You can know what disease you have.</p>
+
+            </div>
+        </div>
+    </header>
+
+	<!-- Intro Section -->
+ <div id="instruction" >
+<!--    <section style="background-color:#6db0ea;  border-color: #fff;" class="intro"  >-->
+<!--        <div  class="container">-->
+<!--            <div class="row">-->
+<!--                <div class="col-lg-8 col-lg-offset-2">-->
+<!--                	<span  style="font-size: 60px"></span>-->
+<!--                    <h2 class="section-heading">Read Instruction Carefully Before Entering Symptoms</h2>-->
+
+<!--                        <h4>Please enter your most affected symptoms for better Prediction</h4>-->
+<!--                        <h4>You have to enter at least 3 symptoms and at most 5.</h4>-->
+<!--                        <h4>You have to ccc hdsifhedshgjkd jkhgjds enter at least 3 symptoms and at most 5.</h4>-->
+
+
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+
+	<!-- Content 1 -->
+    <section class="content"style="background-color:#6db0ea;  border-color: #fff;">
+        <div class="container" >
+            <div class="row">
+
+                <div class="col-md-5">
+                         <table class="table table-striped">
+                              <thead>
+                                <tr>
+                                    <h4 style="font-weight: 700;">Entered Symptoms</h4>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th> S-1</th>
+                                  <td> {{res.s1}}</td>
+                                </tr>
+                                <tr>
+                                  <th> S-2</th>
+                                  <td> {{res.s2}}</td>
+                                </tr>
+                                <tr>
+                                  <th> S-3</th>
+                                  <td>{{res.s3}}</td>
+                                </tr>
+                               <tr>
+                                  <th> S-4</th>
+                                  <td>{{res.s4}}</td>
+                                </tr>
+                               <tr>
+                                  <th> S-5</th>
+                                  <td> {{res.s5}}</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-5">
+                   <h3 style="    font-size: 25px;
+    font-family: serif;
+    font-weight: 700;"> According to your selected symptoms the result found
+                       <a  style="color:#d20b0b;" target="_blank" href="https://www.google.com/search?q={{res.predicted_disease}}">{{res.predicted_disease}}</a><h3>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+ </div>
+
+	<!-- Content 2 -->
+<!--     <section class="content content-2">-->
+<!--        <div class="container">-->
+<!--            <div class="row">-->
+<!--                <div class="col-sm-6">-->
+<!--                	<h2 class="section-header">Superior Quality</h2>-->
+<!--                	<p class="lead text-light">Holisticly predominate extensible testing procedures for reliable supply chains. Dynamically innovate resource-leveling customer service for state of the art customer service.</p>-->
+<!--                	<a href="#" class="btn btn-default btn-lg">Test It</a>-->
+<!--                </div>-->
+<!--                <div class="col-sm-6">-->
+<!--                    <img class="img-responsive img-circle center-block" src="images/iphone.jpg" alt="">-->
+<!--                </div>-->
+
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+
+    <!-- Promos -->
+<!--	<div  id="herePredict" class="container-fluid">-->
+<!--        <div class="row promo">-->
+<!--        	<a href="#">-->
+<!--				<div class="col-md-4 promo-item item-1">-->
+<!--					<h3>-->
+<!--						Unleash-->
+<!--					</h3>-->
+<!--				</div>-->
+<!--            </a>-->
+<!--            <a href="#">-->
+<!--				<div class="col-md-4 promo-item item-2">-->
+<!--					<h3>-->
+<!--						Synergize-->
+<!--					</h3>-->
+<!--				</div>-->
+<!--            </a>-->
+
+<!--			<a href="#">-->
+<!--				<div class="col-md-4 promo-item item-3">-->
+<!--					<h3>-->
+<!--						Procrastinate-->
+<!--					</h3>-->
+<!--				</div>-->
+<!--            </a>-->
+<!--        </div>-->
+<!--    </div>&lt;!&ndash; /.container-fluid &ndash;&gt;-->
+
+	<!-- Content 3 -->
+<!--     <section class="content content-3">-->
+<!--        <div class="container">-->
+<!--			<h2 class="section-header"><span class="glyphicon glyphicon-pushpin text-primary"></span><br> Sanity Check</h2>-->
+<!--			<p class="lead text-muted">Holisticly predominate extensible testing procedures for reliable supply chains. Dynamically innovate resource-leveling customer service for state of the art customer service.</p>-->
+<!--                    <a href="#" class="btn btn-primary btn-lg">Check Now</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+
+
+
+	<!-- Footer -->
+    <footer class="page-footer" >
+
+    	<!-- Contact Us -->
+<!--        <div class="contact"  style="background-color:#1e90ff">-->
+<!--        	<div class="container">-->
+<!--				<h2 class="section-heading">Contact Us</h2>-->
+<!--				<p><span class="glyphicon glyphicon-earphone"></span><br>8604105752</p>-->
+<!--				<p><span class="glyphicon glyphicon-envelope"></span><br> adarshpro43@gmail.com</p>-->
+<!--        	</div>-->
+<!--        </div>-->
+
+        <!-- Copyright etc -->
+       <div class="small-print"  id="contact"style="background-color:#1e90ff;">
+        	<div class="container" style="color:white;">
+                	<h2 class="section-heading">Contact Us</h2>
+				<p><span class="glyphicon glyphicon-earphone"></span><br>86xxxxxx52</p>
+				<p><span class="glyphicon glyphicon-envelope"></span><br> xyz....@gmail.com</p>
+        		<p>Copyright &copy; IET CSE</p>
+        	</div>
+        </div>
+
+    </footer>
+
+
+<!-- The Modal -->
+
+
+<script>
+var inp_box;
+var inpb;
+function load() {
+
+inp_box=document.getElementById('inp_box');
+for(var i=1;i<=5;i++){
+ inpb=document.createElement('input');
+     inpb.type="hidden";
+     inpb.id='in'+i;
+     inpb.name='s'+i;
+     inp_box.appendChild(inpb);
+    }
+  modal.style.display = "block";
+}
+
+function showIns()
+{
+    var s=document.getElementById('instruction');
+    s.style.display="block";
+}
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close");
+
+// When the user clicks the button, open the modal
+
+function closeModal()
+{
+modal.style.display = "none";
+}
+
+// When the user clicks on <span> (x), close the modal
+
+//*****************//
+//only for Search Symptoms Start//
+
+function autocomplete(inp, symp) {
+var arr=[];
+if(symp.length>0)
+{
+    for(var i=0;i<symp.length;i++)
+        {
+            arr[i]=symp[i].toUpperCase();
+        }
+}
+  /*the autocomplete function takes two arguments,
+  the text field element and an array of possible autocompleted values:*/
+  var currentFocus;
+  /*execute a function when someone writes in the text field:*/
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      /*close any already open lists of autocompleted values*/
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+      /*create a DIV element that will contain the items (values):*/
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      /*append the DIV element as a child of the autocomplete container:*/
+      this.parentNode.appendChild(a);
+      /*for each item in the array...*/
+      for (i = 0; i < arr.length; i++) {
+        /*check if the item starts with the same letters as the text field value:*/
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          /*create a DIV element for each matching element:*/
+          b = document.createElement("DIV");
+          /*make the matching letters bold:*/
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          /*insert a input field that will hold the current array item's value:*/
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          /*execute a function when someone clicks on the item value (DIV element):*/
+          b.addEventListener("click", function(e) {
+              /*insert the value for the autocomplete text field:*/
+              inp.value = this.getElementsByTagName("input")[0].value;
+              /*close the list of autocompleted values,
+              (or any other open lists of autocompleted values:*/
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  /*execute a function presses a key on the keyboard:*/
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        /*If the arrow DOWN key is pressed,
+        increase the currentFocus variable:*/
+        currentFocus++;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        /*If the arrow UP key is pressed,
+        decrease the currentFocus variable:*/
+        currentFocus--;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        /*If the ENTER key is pressed, prevent the form from being submitted,*/
+        e.preventDefault();
+        if (currentFocus > -1) {
+          /*and simulate a click on the "active" item:*/
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    /*a function to classify an item as "active":*/
+    if (!x) return false;
+    /*start by removing the "active" class on all items:*/
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    /*add class "autocomplete-active":*/
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    /*a function to remove the "active" class from all autocomplete items:*/
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+    /*close all autocomplete lists in the document,
+    except the one passed as an argument:*/
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+  /*execute a function when someone clicks in the document:*/
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+
+/*An array containing all the country names in the world:*/
+var countries = ['itching','skin_rash','nodal_skin_eruptions','continuous_sneezing','shivering','chills','joint_pain','stomach_pain','acidity',
+    'vomiting','burning_micturition','spotting_ urination','fatigue','weight_gain','anxiety','cold_hands_and_feets','mood_swings'
+    ,'weight_loss','restlessness','lethargy','cough','high_fever','sunken_eyes','breathlessness','sweating','dehydration',
+    'indigestion','headache','yellowish_skin','dark_urine','nausea','loss_of_appetite','pain_behind_the_eyes','back_pain',
+    'constipation','abdominal_pain','diarrhoea','mild_fever','yellowing_of_eyes','swelled_lymph_nodes','malaise','blurred_and_distorted_vision',
+    'phlegm','throat_irritation','redness_of_eyes','sinus_pressure','runny_nose','congestion','chest_pain','weakness_in_limbs',
+    'fast_heart_rate','pain_during_bowel_movements','pain_in_anal_region','bloody_stool','irritation_in_anus','neck_pain',
+    'dizziness','puffy_face_and_eyes','enlarged_thyroid','brittle_nails','excessive_hunger',
+    'drying_and_tingling_lips','slurred_speech','muscle_weakness','stiff_neck','swelling_joints','movement_stiffness',
+    'loss_of_balance','weakness_of_one_body_side','loss_of_smell','bladder_discomfort',
+    'foul_smell_of urine','continuous_feel_of_urine','passage_of_gases','internal_itching','toxic_look_(typhos)','depression',
+    'irritability','muscle_pain','altered_sensorium','red_spots_over_body','belly_pain','abnormal_menstruation','dischromic _patches',
+    'watering_from_eyes','family_history','mucoid_sputum','lack_of_concentration','visual_disturbances','blood_in_sputum',
+    'palpitations','painful_walking','pus_filled_pimples','blackheads','scurring'];
+
+var selected_symp=[];
+function addSymp(){
+
+ var inp=document.getElementById('myInput').value;
+ var predict_btn=document.getElementById('predict_btn');
+
+ if(selected_symp.length>=2 && selected_symp.length<=5)
+ {
+ predict_btn.style.display="block";
+ }
+ else{
+ predict_btn.style.display="none";
+ }
+ if(selected_symp.length>=5){
+ alert("Maximum 5 Value Allowed");
+ return;}
+
+
+ if(countries.indexOf(inp.toLowerCase())>-1)
+ {
+        selected_symp.push(inp.toLowerCase());
+
+    var board = document.createElement('div');
+    board.className = "symp";
+    board.innerHTML=inp;
+    board.style.color="#d42323";
+    board.style.margin="20px";
+    board.style.background="rgb(173 205 236)";
+    board.style.borderRadius="4px";
+    board.style.padding="10px";
+    board.style.boxShadow="#565fea 2px 2px 10px 5px";
+    fontFamily:"sans-serif";
+
+
+
+    var ll=document.getElementById('symptodiv');
+    ll.appendChild(board);
+    ll.style.display="block";
+
+    var p='in'+selected_symp.length;
+    var ii=document.getElementById(p);
+     ii.value=inp;
+     inp_box.style.display="hidden";
+ }
+ else
+ alert("NOt Found");
+}
+
+var today = new Date();
+        var p=today.getDate()+"/"+today.getMonth()+"/"+today.getFullYear();
+        document.getElementById('date1').value=p;
+
+
+/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+autocomplete(document.getElementById("myInput"), countries);
+
+//only for Search Symptoms END//
+// When the user clicks anywhere outside of the modal, close it
+
+</script>
+ <script src="{{BASE_URL}}/static/js/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{BASE_URL}}/static/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{{BASE_URL}}/static/js/jquery.easing.min.js"></script>
+
+    <!-- Custom Javascript -->
+    <script src="{{BASE_URL}}/static/js/custom.js"></script>
+
+</body>
+</html>
