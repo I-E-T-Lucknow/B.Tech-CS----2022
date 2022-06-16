@@ -18,7 +18,7 @@
     1. Memorable password suggestion
     2. Personalized password strength prediction  
 
-#### OR Local Enviornment Setup
+#### Local Enviornment Setup
     1. Cloning repository.
           git clone <repo link> or locally download zip folder.
           
