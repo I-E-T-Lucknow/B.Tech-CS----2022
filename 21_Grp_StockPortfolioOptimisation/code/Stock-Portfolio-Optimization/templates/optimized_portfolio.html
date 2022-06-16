@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        :root {
+  --surface-color: #fff;
+  --curve: 40;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: url('https://source.unsplash.com/CXys6xyRx_M');
+  /* background-color: #fef8f8; */
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 5vw;
+  padding: 0;
+  list-style-type: none;
+}
+
+.card {
+  position: relative;
+  display: block;
+  height: 100%;  
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.card__image {      
+  width: 100%;
+  height: auto;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;      
+  border-radius: calc(var(--curve) * 1px);    
+  background-color: var(--surface-color);      
+  transform: translateY(100%);
+  transition: .2s ease-in-out;
+}
+
+.card:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border-radius: calc(var(--curve) * 1px) 0 0 0;    
+  background-color: var(--surface-color);
+  transform: translateY(-100%);
+  transition: .2s ease-in-out;
+}
+
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;      
+  z-index: 1;
+}
+
+.card__arc path {
+  fill: var(--surface-color);
+  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}       
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__thumb {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;      
+  border-radius: 50%;      
+}
+
+.card__title {
+  font-size: 1em;
+  margin: 0 0 .3em;
+  color: #6A515E;
+}
+
+.card__tagline {
+  display: block;
+  margin: 1em 0;
+  font-family: "MockFlowFont";  
+  font-size: .8em; 
+  color: #D7BDCA;  
+}
+
+.card__status {
+  font-size: .8em;
+  color: #D7BDCA;
+}
+
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  color: #D7BDCA;
+  font-family: "MockFlowFont";   
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+} 
+
+h2 {text-align: center;color:white;}
+
+
+
+a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 10px 100px 0;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav li{
+  margin: 0 15px;
+}
+
+header nav li:first-child{
+  margin-left: 0; 
+}
+
+header nav li:last-child{
+  margin-right: 0;  
+}
+
+a.btn {
+  color: #fff;
+  padding: 10px;
+  border: 1px solid rgba(255,255,255,0.5);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+a.btn:hover {
+  background: #d73851;
+  border: 1px solid #d73851;
+  color: #fff;
+}
+
+header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    padding: 10px !important;
+  }
+
+  header h2 {
+    margin-bottom: 15px;
+  }
+
+    </style>
+    <title>Optimized Portfolio</title>
+</head>
+<body>
+
+    <BR>
+    <BR>
+    <H2>
+        Here you can have the comparision of various optimizers in form of bar chart.
+    </H2>
+    
+    <ul class="cards">
+        <li>
+          <a href="{{ url_for('static', filename=barchart_expectedreturns) }}" class="card">
+            <img src="{{ url_for('static', filename=barchart_expectedreturns) }}" class="card__image" alt="" />
+            <div class="card__overlay">
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                <!-- <img class="card__thumb" src="https://source.unsplash.com/random" alt="" /> -->
+                <div class="card__header-text">
+                  <h3 class="card__title">Expected Returns Comparision</h3>            
+                  <span class="card__tagline"></span>
+                </div>
+              </div>
+              <p class="card__description">
+             </p>
+            </div>
+          </a>      
+        </li>
+        <li>
+          <a href="{{ url_for('static', filename=barchart_changedvariance) }}" class="card">
+            <img src="{{ url_for('static', filename=barchart_changedvariance) }}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!-- <img class="card__thumb" src="https://source.unsplash.com/random" alt="" />  -->
+                <div class="card__header-text">
+                  <h3 class="card__title">Volatility comparision</h3>
+                  <span class="card__tagline"></span>
+                </div>
+              </div>
+              <p class="card__description"></p>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a href="{{ url_for('static', filename=barchart_sharpratio) }}" class="card">
+            <img src="{{ url_for('static', filename=barchart_sharpratio) }}" class="card__image" alt="" />
+            <div class="card__overlay">
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                <!-- <img class="card__thumb" src="https://source.unsplash.com/random" alt="" /> -->
+                <div class="card__header-text">
+                  <h3 class="card__title">Sharp Ratio Comparision</h3>
+                  <span class="card__tagline"></span>            
+                  <!-- <span class="card__status">1 hour ago</span> -->
+                </div>
+              </div>
+              <p class="card__description"></p>
+            </div>
+          </a>
+        </li>
+      </ul>
+
+    
+        <H2>
+        Here are the allotment amount list for the list :  {{ tickers }} of stocks by three each optmizers.
+        Pick what pleases you.
+        </H2>
+    
+
+    <ul class="cards">
+        <li>
+          <a href="{{ url_for('static', filename=chart_markowitz) }}" class="card">
+            <img src="{{ url_for('static', filename=chart_markowitz) }}" class="card__image" alt="" />
+            <div class="card__overlay">
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                <!-- <img class="card__thumb" src="https://source.unsplash.com/random" alt="" /> -->
+                <div class="card__header-text">
+                  <h3 class="card__title">Markowitz Portfolio</h3>            
+                  <span class="card__tagline">The Classic OG</span>
+                </div>
+              </div>
+              <p class="card__description">Total Markowitz return = {{markowitz_return}} % for the following distribution : {{ markowitz_allocation }}</p>
+            </div>
+          </a>      
+        </li>
+        <li>
+          <a href="{{ url_for('static', filename=chart_rpp) }}" class="card">
+            <img src="{{ url_for('static', filename=chart_rpp) }}" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <!-- <img class="card__thumb" src="https://source.unsplash.com/random" alt="" /> -->
+                <div class="card__header-text">
+                  <h3 class="card__title">Risk Parity portfolio</h3>
+                  <span class="card__tagline">Equal risk division</span>
+                </div>
+              </div>
+              <p class="card__description">Total Risk Parity return = {{risk_return}} % for the following distribution : {{ rp_allocation }}</p>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a href="{{ url_for('static', filename=chart_hrp) }}" class="card">
+            <img src="{{ url_for('static', filename=chart_hrp) }}" class="card__image" alt="" />
+            <div class="card__overlay">
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                <!-- <img class="card__thumb" src="https://source.unsplash.com/random" alt="" /> -->
+                <div class="card__header-text">
+                  <h3 class="card__title">Hierarchical Risk parity</h3>
+                  <span class="card__tagline">Latest Companion</span>            
+                  <!-- <span class="card__status">1 hour ago</span> -->
+                </div>
+              </div>
+              <p class="card__description">Total HRP return = {{hrp_return}} % for the following distribution : {{ hrp_allocation }}</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+
+
+</body>
+</html>
