@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FaceRecognition</title>
+</head>
+<style>
+.container {
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background: rgb(202, 172, 172);
+    height: 800px;
+    font-family: Arial;
+}
+.content {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.btn {
+    border-radius: 4px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: rgb(3, 3, 3);
+    padding: 13px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform .5s;
+
+}
+img {
+    width: 980px;
+    height: 500px;
+    border: 2px solid #4CAF50;;
+    border-radius: 8px;
+}
+.parent {
+  margin: 1rem;
+  padding: 1.5rem 1.5rem;
+  text-align: center;
+  background-color: #c4eeee;
+  width: 700px;
+  border-radius: 8px;
+}
+.child {
+  display: inline-block;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+
+}
+.btn:hover {
+    background-color: rgb(202, 172, 172);
+    transform: scale(1.1);
+}
+</style>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="parent">
+                <div class="child">
+                    <a class="button btn" type="button" href="{% url "home" %}"> Home</a>
+                </div>
+                <div class="child">
+                    <a class="button btn" type="button" href="{% url "trainModel" %}"> Train Model</a>
+                </div>
+                <div class="child">
+                    <a class="button btn" type="button" href="{% url "recognizer" %}"> Start Face Recognizer</a>
+                </div>
+            </div>
+        </div>
+        <br />
+        <img src="{% url 'createDataset' %}?userName={{ userName }}"/>
+    </div>
+</body>
+</html>
