@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='styles/style.css') }}"
+    />
+    <title>Heart Disease Predictor</title>
+  </head>
+  <body>
+    <div>
+      <div class="nav">
+        <input type="checkbox" id="nav-check" />
+        <div class="nav-header">
+          <div class="nav-title">Heart Disease Predictor</div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+
+        <div class="nav-links">
+          <a href="/aboutUs" target="_blank">About Us</a>
+        </div>
+      </div>
+    </div>
+    <section>
+      <div class="container">
+        <h1 id="title">Heart Disease Predictor</h1>
+
+        <form
+          id="survey-form"
+          action="/api"
+          method="post"
+          submit="savedetails()"
+        >
+          <div class="inputwrap col">
+            <label for="name" id="name-label" class="bold">Name</label>
+            <input
+              class="mt8"
+              type="text"
+              name="name"
+              required
+              placeholder="Enter your Name"
+              id="name"
+            />
+          </div>
+          <div class="inputwrap col">
+            <label for="email" id="email-label" class="bold">Email</label>
+            <input
+              class="mt8"
+              type="email"
+              name="email"
+              required
+              placeholder="Enter your Email"
+              id="email"
+            />
+          </div>
+          <div class="inputwrap col">
+            <label for="number" id="number-label" required class="bold">Age</label>
+            <input
+              class="mt8"
+              type="number"
+              name="age"
+              min="29"
+              max="77"
+              placeholder="Age"
+              required
+            />
+          </div>
+
+          <div class="inputwrap col">
+            <label for="gender" class="bold">Select your gender</label>
+            <select name="gender" id="dropdown" class="mt8">
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </div>
+          <div class="inputwrap col">
+            <label for="cp" class="bold">Chest Pain Types</label>
+            <select name="cp" id="dropdown" class="mt8">
+              <option value="0">Typical Angina</option>
+              <option value="1">Atypical Angina</option>
+              <option value="2">Non-Anginal</option>
+              <option value="3">Asymptotic</option>
+            </select>
+          </div>
+          <div class="inputwrap col">
+            <label for="number" name="trestbps" class="bold" min="0" max="90"
+              >Resting Blood Pressure(in mm/Hg)</label
+            >
+            <input
+              class="mt8"
+              type="number"
+              id="number"
+              name="trestbps"
+              min="94"
+              max="200"
+              placeholder="Resting Blood Pressure"
+            />
+          </div>
+          <div class="inputwrap col">
+            <label for="number" name="chol" class="bold" min="0" max="90"
+              >Cholesterol Level</label
+            >
+            <input
+              class="mt8"
+              type="number"
+              id="number"
+              name="chol"
+              min="126"
+              max="564"
+              placeholder="Cholesterol"
+            />
+          </div>
+          <div class="inputwrap col">
+            <label for="number" name="fbs" class="bold" min="0" max="90"
+              >is Fasting Blood Pressure>120mg/Dl?</label
+            >
+            <select name="fbs" id="dropdown" class="mt8">
+              <option value="0">No</option>
+              <option value="1">Yes</option>  
+            </select>
+            <!-- <input
+              class="mt8"
+              type="number"
+              id="number"
+              name="fbs"
+              min="0"
+              max="1"
+              placeholder="Fasting Blood Pressures"
+            /> -->
+          </div>
+          <div class="inputwrap col">
+            <label for="number" name="restecg" class="bold" min="0" max="90"
+              >Resting Electro Cardio Graphic Result</label
+            >
+            <select name="restecg" id="dropdown" class="mt8">
+              <option>Normal</option>
+              <option>STT Abnormality</option>
+              <option>IV Hypertrophy</option>
+            </select>
+          </div>
+          <div class="inputwrap col">
+            <label for="number" name="thalach" class="bold" min="0" max="90"
+              >Maximum Heart Rate Achieved</label
+            >
+            <input
+              class="mt8"
+              type="number"
+              id="number"
+              name="thalach"
+              min="71"
+              max="202"
+              placeholder="Maximum Heart Rate Achieveds"
+            />
+          </div>
+          <div class="inputwrap col">
+            <label for="number" name="exang" class="bold" min="0" max="90"
+              >Does Exercise Induced Angina?</label
+            >
+            <select name="exang" id="dropdown" class="mt8">
+              <option value="0">No</option>
+              <option value="1">Yes</option>
+              
+            </select>
+          </div>
+          <div class="inputwrap col">
+            <label for="number" name="oldpeak" class="bold" min="0" max="90"
+              >Old Peak (ST Depression Induced by Exercise Relative to
+              Rest)</label
+            >
+            <span><sup>Permissible Values: 0 - 6.7</sup></span>
+            <input
+              class="mt8"
+              type="number"
+              id="number"
+              name="oldpeak"
+              min="0"
+              max="6.2"
+              placeholder="Old Peak"
+            />
+          </div>
+          <div class="inputwrap col">
+            <label for="Slope of ST Segment" class="bold"
+              >Slope of ST Segment</label
+            >
+            <select name="slope" id="dropdown" class="mt8">
+              <option>2</option>
+              <option>0</option>
+              <option>1</option>
+              
+            </select>
+          </div>
+          <div class="inputwrap col">
+            <label
+              for="number of major vessels (0-3) colored by flourosopy"
+              class="bold"
+              >number of major vessels (0-3) colored by flourosopy</label
+            >
+            <select name="ca" id="dropdown" class="mt8">
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+          </div>
+          <div class="inputwrap col">
+            <label for="Thal" class="bold">Thal Type</label>
+            <select name="thal" id="dropdown" class="mt8">
+              <option>Normal</option>
+              <option>Fixed Defect</option>
+              <option>Reversible Defect</option>
+            </select>
+          </div>
+          <div class="inputwrap">
+            <p class="bold">Any additional information we should know?</p>
+            <textarea
+              name="comments"
+              id="comments"
+              cols="30"
+              rows="7"
+            ></textarea>
+          </div>
+
+          <button type="submit" id="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+  </body>
+  <script>
+    function savedetails() {
+      console.log("xdvjKvKVJC");
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      console.log(name, email);
+      localStorage.setItem("email", email);
+      localStorage.setItem("name", name);
+      console.log("fshksu");
+    }
+  </script>
+</html>
