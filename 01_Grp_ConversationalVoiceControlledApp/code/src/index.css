@@ -1,0 +1,27 @@
+#root, html, body {
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    background-color: lightcyan
+}
+
+.header {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: x-large;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.author {
+    padding-top: 150px;
+    padding-left: 10px;
+}
