@@ -1,8 +1,18 @@
 ### :rocket: Checking Password Strength Using Machine Learning and Artificial Intelligence
-    Passwords are a lively component of method security. The password is the more destructively authenticating the correspondence in many requests. Password strength meters present a natural and immediate ability to be seen with eye response for that reason constitutes a forceful identification. When background a new account or changeful passwords, a limited beat indicates by virtue of how forceful a projected password is thought-out expected.
-    Life nowadays has emerged as in large part depending on passwords. A regular pc consumer might also additionally require passwords for plenty functions inclusive of logging in to pc accounts, retrieving email from servers, moving funds, buying online, having access to programs, databases, networks, internet sites, or even analyzing the morning newspaper online.
-    As the internet is growing the cyber crime world is also becoming more advanced and the number of security loopholes are increasing day by day. As the number of cyber attacks are increasing , choosing a good strength password has become an essential action for ourselves.
-    Our goal is to create a machine learning model which can predict the strength of passwords so that weak passwords can be detected and avoided to secure our social and personal information on the internet.
+    Passwords are a lively component of method security. 
+    The password is the more destructively authenticating the correspondence in many requests. 
+    Password strength meters present a natural and immediate ability to be seen with eye response 
+    for that reason constitutes a forceful identification. When background a new account or changeful passwords,
+    a limited beat indicates by virtue of how forceful a projected password is thought-out expected.
+    Life nowadays has emerged as in large part depending on passwords. A regular pc consumer might also 
+    additionally require passwords for plenty functions inclusive of logging in to pc accounts, retrieving email 
+    from servers, moving funds, buying online, having access to programs, databases, networks, internet sites, 
+    or even analyzing the morning newspaper online.
+    As the internet is growing the cyber crime world is also becoming more advanced and the number of security 
+    loopholes are increasing day by day. As the number of cyber attacks are increasing , choosing a good strength
+    password has become an essential action for ourselves.
+    Our goal is to create a machine learning model which can predict the strength of passwords so that weak passwords
+    can be detected and avoided to secure our social and personal information on the internet.
 ### :dart: In future features: 
     In the future scope of this project we have two new features
     1. Memorable password suggestion
