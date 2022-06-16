@@ -66,6 +66,6 @@ The project is running now.
 
 ## Authors
 
-- Anushka kanaujia (B.Tech. CSE-2022 - 1805210010) [[clg Email id](1805210010@ietlucknow.ac.in), [per email](anushkakanaujia@gmail.com)]
-- Astha Sachan (B.Tech. CSE-2022 - 1805210015) [[clg Email id](1805210015@ietlucknow.ac.in), [per email](asthasachan02@gmail.com)]
-- Prateeksha Tiwari (B.Tech. CSE-2022 - 1805210037) [[clg Email id](1805210037@ietlucknow.ac.in), [per email](prateekshatiwari56@gmail.com)]
+- Anushka kanaujia (B.Tech. CSE-2022 - 1805210010) (clg Email id)(1805210010@ietlucknow.ac.in), (per email)(anushkakanaujia@gmail.com)
+- Astha Sachan (B.Tech. CSE-2022 - 1805210015) (clg Email id)(1805210015@ietlucknow.ac.in), (per email)(asthasachan02@gmail.com)
+- Prateeksha Tiwari (B.Tech. CSE-2022 - 1805210037) (clg Email id)(1805210037@ietlucknow.ac.in), (per email)(prateekshatiwari56@gmail.com)
