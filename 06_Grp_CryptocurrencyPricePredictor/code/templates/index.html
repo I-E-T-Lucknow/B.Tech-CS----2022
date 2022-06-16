@@ -1,0 +1,117 @@
+<html>
+<head>
+  <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
+  <link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css" type="text/css" rel="stylesheet">
+  <link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css" type="text/css" rel="stylesheet">
+  <style type="text/css">
+
+    html,
+    body,
+    #container {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  
+</style>
+</head>
+<body onload ="mount();">
+  
+  <div id="container"></div>
+
+  <script>
+
+    var dataArray = new Array(31);
+    // var dataSet;
+    function mount(){
+        let fetchRes = fetch("http://localhost:8000/testAPI/");
+        fetchRes
+            .then(res => res.json())
+            .then(d => { 
+                for(let i=0; i<31; i++){
+                  dataArray[i] = new Array(3);   
+                  // dataArray.push([d[i].date.slice(0,10), d[i].value, d[i+31].value ]);
+                  dataArray[i][0] = d[i].date.slice(0,10) , dataArray[i][1] = d[i].value , dataArray[i][2] = d[i +  31].value
+                
+                // dataSet = anychart.data.set(
+                //   dataArray
+                // );
+              }
+        crypto();
+        console.log("in")
+        })
+        console.log("out")
+    }
+      
+    // anychart.onDocumentReady(
+    function crypto() {
+      console.log("outer")
+        
+      var dataSet = anychart.data.set(
+        dataArray
+      );
+
+      var btcData = dataSet.mapAs({ x: 0, value: 1 });
+
+      var etherData = dataSet.mapAs({ x: 0, value: 2 });
+
+      // create line chart
+      var chart = anychart.line();
+
+      // turn on chart animation
+      chart.animation(true);
+
+      // set chart padding
+      chart.padding([10, 20, 5, 20]);
+
+      // turn on the crosshair
+      chart.crosshair().enabled(true).yLabel(false).yStroke(null);
+
+      // set tooltip mode to point
+      chart.tooltip().positionMode('point');
+
+      // set chart title text settings
+      chart.title(
+        'Crypto Currency Predictor'
+      );
+
+      // set yAxis title
+      chart.yAxis().title('Number of Bottles Sold (thousands)');
+      chart.xAxis().labels().padding(5);
+
+      var btc = chart.line(btcData);
+      btc.name('Bitcoin');
+      btc.hovered().markers().enabled(true).type('circle').size(4);
+      btc
+        .tooltip()
+        .position('right')
+        .anchor('left-center')
+        .offsetX(5)
+        .offsetY(5);
+
+      var ether = chart.line(etherData);
+      ether.name('Etherium');
+      ether.hovered().markers().enabled(true).type('circle').size(4);
+      ether
+        .tooltip()
+        .position('right')
+        .anchor('left-center')
+        .offsetX(5)
+        .offsetY(5);
+
+      // turn the legend on
+      chart.legend().enabled(true).fontSize(13).padding([0, 0, 10, 0]);
+
+      // set container id for the chart
+      chart.container('container');
+      // initiate chart drawing
+      chart.draw();
+    };
+  
+</script>
+</body>
+</html>
+                
