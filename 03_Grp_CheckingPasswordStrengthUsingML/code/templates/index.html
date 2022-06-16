@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Password Strength Analysis</title>
+    <!-- Bootstrap -->
+    <link href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}" rel="stylesheet">
+    
+</head>
+
+<body>
+
+    <h3 class="text-center" style="padding:15px">CHECK YOUR PASSWORD STRENGTH</h3>
+
+        <div class="col-md-8" style="text-align:center;margin: 0 auto;">
+            <form method="POST" action="/main/">
+                <input type="text" class="form-control" placeholder="Enter Password" name="password" required>
+                <div class="button-group" style="margin-top:15px;"><br>
+                    <button type="submit" name="submit" class="btn btn-primary">Check</button>
+                </div>
+            </form>
+        </div>
+    
+
+
+    
+        <div class="col-md-8" style="margin: 0 auto; margin-top:25px;">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Algorithm</th>
+                        <th scope="col">Strength</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Decision Tree</td>
+                        <td>None</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+
+</body>
+
+</html>
