@@ -1,0 +1,23 @@
+{%extends "base.html"%}
+    
+{%block content%}
+
+<center>
+
+	<h1 class='display-2'>Predicted Caption </h1>
+
+	<br>
+	<br>
+	
+<img src="{{url_for('static', filename='file.jpg')}}" alt="image" height=400px>
+
+<br>
+
+<h2 class='head2'>
+<span>"</span>	{{data}} <span>"</span>
+</h2>
+<A HREF='http://127.0.0.1:5000/'class='btn btn-warning' >Click Here to try Again</A>
+
+</center>
+
+{%endblock%}

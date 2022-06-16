@@ -1,0 +1,6 @@
+opencv-python-headless==4.0.1.24
+tensorflow-cpu==2.9.1
+keras==2.9.0
+numpy==1.22.4
+tqdm==4.64.0
+gunicorn==20.1.0
