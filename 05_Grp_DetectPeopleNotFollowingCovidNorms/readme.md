@@ -63,6 +63,6 @@ To Start the project there are three steps
     Click Button `Start Face Recognizer`
     
 # Contributers
-**Navin Chandra**(CSE-2022), Roll No: 1805210027, Mobile: 9335494254, email: 1805210027@ietlucknow.ac.in
+`**Navin Chandra**(CSE-2022), Roll No: 1805210027, Mobile: 9335494254, email: 1805210027@ietlucknow.ac.in`
 **Tushar Giri**(CSE-2022), Roll No: 1805210027, Mobile: 8299763499, email: 1805210059@ietlucknow.ac.in
 **Arnab Debnath**(CSE-2022), Roll No: 1805210027, Mobile: 9664248583, email: 1805210011@ietlucknow.ac.in
