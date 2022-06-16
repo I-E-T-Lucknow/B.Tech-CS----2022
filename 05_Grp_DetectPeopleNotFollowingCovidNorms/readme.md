@@ -44,23 +44,13 @@ To install all the dependencies, run the command:
 ```
 pip install -r requirements.txt
 ```
-# How To Start Project
+# Phases
 
 To Start the project there are three steps
+![Phases](https://user-images.githubusercontent.com/67675111/174136947-0e0ab970-9fb0-40c0-87cb-c3f35c3f759b.png)
 
-1. Detecting the Human Faces, in this step user dataset will be created
-
-    Enter the user name which dataset you are going to create and click button `Create Dataset`
-    
-
-2. To train the model using created dataset 
-    
-    Click Button `Train Model`
-
-
-3. To Recognize the user at real time
-    
-    Click Button `Start Face Recognizer`
+# Flowchat of our project 
+![chart](https://user-images.githubusercontent.com/67675111/174136908-65402888-7eb0-43b3-8633-e7e5caa8cd75.png)
     
 # Contributers
 **Navin Chandra**(CSE-2022), Roll No: 1805210027, Mobile: 9335494254, email: 1805210027@ietlucknow.ac.in
