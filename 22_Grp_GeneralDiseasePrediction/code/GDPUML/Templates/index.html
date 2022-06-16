@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{BASE_URL}}/static/css/bootstrap.min.css" rel="stylesheet">
+     <link href="{{BASE_URL}}/static/css/bootstrap.css" rel="stylesheet">
+	<title>Index</title>
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+    <link href="{{BASE_URL}}/static/css/custom.css" rel="stylesheet">
+     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom Fonts from Google -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <style>
+
+body{
+	margin:0;
+	color:#6a6f8c;
+	background:#c8c8c8;
+	font:600 16px/18px 'Open Sans',sans-serif;
+}
+
+.login-box{
+border-radius:20px;
+
+	width:100%;
+	margin:auto;
+	max-width:525px;
+	min-height:670px;
+	position:relative;
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+.login-snip{
+
+	width:100%;
+	border-radius:20px;
+	height:100%;
+	position:absolute;
+	padding:40px 70px 50px 70px;
+	background:rgb(73 45 135 / 90%);
+}
+.login-snip .login,
+.login-snip .sign-up-form{
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:absolute;
+	transform:rotateY(180deg);
+	backface-visibility:hidden;
+	transition:all .4s linear;
+}
+.login-snip .sign-in,
+.login-snip .sign-up,
+.login-space .group .check{
+	display:none;
+}
+.login-snip .tab,
+.login-space .group .label,
+.login-space .group .button{
+	text-transform:uppercase;
+}
+.login-snip .tab{
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 0;
+	display:inline-block;
+	border-bottom:2px solid transparent;
+}
+.login-snip .sign-in:checked + .tab,
+.login-snip .sign-up:checked + .tab{
+	color:#fff;
+	border-color:#1161ee;
+}
+.login-space{
+	min-height:345px;
+	position:relative;
+	perspective:1000px;
+	transform-style:preserve-3d;
+}
+.login-space .group{
+	margin-bottom:-3px;
+}
+.login-space .group .label,
+.login-space .group .input,
+.login-space .group .button{
+	width:100%;
+	color:#fff;
+	display:block;
+}
+.login-space .group .input,
+.login-space .group .button{
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(255,255,255,.1);
+}
+.login-space .group input[data-type="password"]{
+	text-security:circle;
+	-webkit-text-security:circle;
+}
+.login-space .group .label{
+	color:#aaa;
+	font-size:12px;
+}
+.login-space .group .button{
+	background:#1161ee;
+	margin-bottom: -28px;
+}
+.login-space .group label .icon{
+	width:15px;
+	height:15px;
+	border-radius:2px;
+	position:relative;
+	display:inline-block;
+	background:rgba(255,255,255,.1);
+}
+.login-space .group label .icon:before,
+.login-space .group label .icon:after{
+	content:'';
+	width:10px;
+	height:2px;
+	background:#fff;
+	position:absolute;
+	transition:all .2s ease-in-out 0s;
+}
+.login-space .group label .icon:before{
+	left:3px;
+	width:5px;
+	bottom:6px;
+	transform:scale(0) rotate(0);
+}
+.login-space .group label .icon:after{
+	top:6px;
+	right:0;
+	transform:scale(0) rotate(0);
+}
+.login-space .group .check:checked + label{
+	color:#fff;
+	margin-bottom: 15px;
+}
+.login-space .group .check:checked + label .icon{
+	background:#1161ee;
+}
+.login-space .group .check:checked + label .icon:before{
+	transform:scale(1) rotate(45deg);
+}
+.login-space .group .check:checked + label .icon:after{
+	transform:scale(1) rotate(-45deg);
+}
+.login-snip .sign-in:checked + .tab + .sign-up + .tab + .login-space .login{
+	transform:rotate(0);
+}
+.login-snip .sign-up:checked + .tab + .login-space .sign-up-form{
+	transform:rotate(0);
+}
+
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
+
+
+.hr{
+	height:2px;
+	margin:34px 0 50px 0;
+	background:rgba(255,255,255,.2);
+}
+.foot{
+	text-align:center;
+}
+.card{
+border-radius:20px;
+margin-top:20px;
+}
+
+::placeholder{
+color: #b3b3b3;
+}
+
+
+
+
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(254,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+    </style>
+</head>
+<body  style="background-image: url({{BASE_URL}}static/images/login_doctor.jpg);" onload="load()">
+
+
+
+
+
+          <div class ="row" style="margin: auto 0px;">
+			  <div class="col-md-4"><h3 style="color:red;"></h3></div>
+	<div class="col-md-4 mx-auto p-0">
+		<div class="card">
+<div class="login-box" style="background-image: url({{BASE_URL}}static/images/login_card_image.jpg);">
+	<div class="login-snip">
+
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked ><label for="tab-1" class="tab">Login</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+		<div class="login-space">
+			<div class="login">
+				<form action="login" method="post">
+				 {% csrf_token %}
+					<div class="group">
+						<span><h4><div style="color:white;">{{invs.err}}{{inv.err}}</div></h4></span>
+						<label for="userl" class="label">Email</label>
+						<input id="userl" name="uemaill" type="text" class="input"  style="text-transform:lowercase" placeholder="Enter your email">
+						<label  id="label_userl"></label>
+					</div>
+				<div class="group">
+					<label for="passl" class="label">Password</label>
+					<input id="passl" name="upassl" type="password" class="input" data-type="password" placeholder="Enter your password">
+					<label  id="label_passl"></label>
+				</div>
+				<div class="group">
+					<input id="check" type="checkbox" class="check" checked>
+					<label for="check"><span class="icon"></span> Keep me Signed in</label>
+				</div>
+				<div class="group">
+					<input type="button" class="button" value="Sign In" onclick="validate_pass()" id="log_button">
+				</div>
+				</form>
+				<div class="hr"></div>
+				<div class="foot">
+					<a href="" style="color:red;"></a>
+				</div>
+			</div>
+			<div class="sign-up-form" id="signup1">
+				<form action="signup" method="post">
+				 {% csrf_token %}
+					<div class="group">
+						<span><h4><div style="color:white;" id="singer"></div></h4></span>
+					<label for="userSi" class="label">Username</label>
+						<input id="userSi" name="uname" type="text" class="input" placeholder="Create your Username">
+						<label   id="userSi_label" ></label>
+					</div>
+				<div class="group">
+					<label for="passSi" class="label">Password</label>
+					<input id="passSi" name="upass" type="password" class="input" data-type="password" placeholder="Create your password">
+					<label   id="passSi_label" ></label>
+				</div>
+				<div class="group">
+					<label for="passRep" class="label" >Repeat Password</label>
+					<input id="passRep"  type="password" class="input" data-type="password" placeholder="Repeat your password"  >
+					<label   id="passRep_label" ></label>
+				</div>
+				<div class="group">
+					<label for="emailSi" class="label">Email Address</label>
+					<input id="emailSi" name="uemail" type="email" style="text-transform:lowercase" class="input" style="text-transform:lowercase" placeholder="Enter your email address">
+					<label   id="email_label" ></label>
+				</div>
+					<div class="group">
+					<label for="dateSi" class="label">DOB</label>
+						<input id="dateSi" name="udate" type="date" class="input" >
+						<label   id="date_label" ></label>
+					</div>
+				<div class="group">
+					<input type="button" class="button" value="Sign Up" id="sub_button" onclick="validate_pass()">
+				</div>
+				</form>
+				<div class="hr"></div>
+				<div class="foot">
+					<label for="tab-1">Already Member?</label>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+			  <div class="col-md-4"></div>
+</div>
+
+
+
+<script>
+	function load() {
+
+  return true;
+}
+
+function showIns()
+{
+    var s=document.getElementById('instruction');
+    s.style.display="block";
+}
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close");
+
+// When the user clicks the button, open the modal
+
+function closeModal()
+{
+modal.style.display = "none";
+}
+
+function validate_pass()
+{
+var st=0,lst=0;
+var userl=document.getElementById('userl').value;
+var passl=document.getElementById('passl').value;
+
+var uname=document.getElementById('userSi').value;
+var pass1=document.getElementById('passSi').value;
+var pass2=document.getElementById('passRep').value;
+var emailSi=document.getElementById('emailSi').value;
+var dateSi=document.getElementById('dateSi').value;
+
+
+var label_userl=document.getElementById('label_userl');
+var label_passl=document.getElementById('label_passl');
+
+var userSi_label=document.getElementById('userSi_label');
+var passSi_label=document.getElementById('passSi_label');
+var passRep_label=document.getElementById('passRep_label');
+var email_label=document.getElementById('email_label');
+var date_label=document.getElementById('date_label');
+var but=document.getElementById('sub_button');
+var butl=document.getElementById('log_button');
+userSi_label.innerHTML="";
+passSi_label.innerHTML="";
+passRep_label.innerHTML="";
+email_label.innerHTML="";
+date_label.innerHTML="";
+label_userl.innerHTML="";
+label_passl.innerHTML="";
+if(uname=='')
+{
+	userSi_label.style.color="red";
+	userSi_label.style.fontSize = "x-small";
+	userSi_label.innerHTML="Please Enter User Name";
+	st=1;
+}
+if(pass1=='')
+{
+	passSi_label.style.color="red";
+	passSi_label.style.fontSize = "x-small";
+	passSi_label.innerHTML="Please Enter Password";
+	st=1;
+}
+if(pass2=='')
+{
+	passRep_label.style.color="red";
+	passRep_label.style.fontSize = "x-small";
+	passRep_label.innerHTML="Please Enter Repeated Password";
+	st=1;
+}
+
+if(pass1!=pass2)
+{
+	var passRep_label=document.getElementById('passRep_label');
+	passRep_label.style.color="red";
+	passRep_label.style.fontSize = "x-small";
+	passRep_label.innerHTML="Password and Repeat Password are not Same";
+	st=1;
+}
+
+if(emailSi=='')
+{
+	email_label.style.color="red";
+	email_label.style.fontSize = "x-small";
+	email_label.innerHTML="Please Enter Email";
+	st=1;
+}
+
+
+if(!dateSi)
+{
+	date_label.style.color="red";
+	date_label.style.fontSize = "x-small";
+	date_label.innerHTML="Please Enter DOB";
+	st=1;
+}
+
+
+
+if(userl=='')
+{
+	label_userl.style.color="red";
+	label_userl.style.fontSize = "x-small";
+	label_userl.innerHTML="Please Enter Email";
+	lst=1;
+}
+
+if(passl=='')
+{
+	label_passl.style.color="red";
+	label_passl.style.fontSize = "x-small";
+	label_passl.innerHTML="Please Enter Password";
+	lst=1;
+}
+
+if(st==0)
+{but.type="submit"
+}if(lst==0)
+{butl.type="submit"
+}
+else
+st=0;
+}
+</script>
+
+
+ <script src="{{BASE_URL}}/static/js/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{BASE_URL}}/static/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{{BASE_URL}}/static/js/jquery.easing.min.js"></script>
+
+    <!-- Custom Javascript -->
+    <script src="{{BASE_URL}}/static/js/custom.js"></script>
+
+</body>
+</html>
