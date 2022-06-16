@@ -34,8 +34,11 @@ wearing masks.
 # SOFTWARE REQUIREMENTS 
 The Jupyter Notebook IDE and the Python programming language were used to create this
 application.
+
 ● Programming Language – Python
+
 ● Python IDE – Sublime Text
+
 ● Deep Learning Framework - Tensorflow. 
 
 # INSTALLATION
