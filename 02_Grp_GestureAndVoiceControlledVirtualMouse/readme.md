@@ -73,7 +73,7 @@ Note: Use Python version: 3.8.5
  <figcaption>Dynamic Gestures for Brightness control. The rate of increase/decrease of brightness is proportional to the distance moved by pinch gesture from start point. </figcaption>
 </details>
 
-### Voice Assistant ( ***Proton*** ):
+### Voice Assistant ( ***Jerry*** ):
 <details>
 <summary>Launch / Stop  Gesture Recognition</summary>
 <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p10.jpeg" alt="launch stop gesture recognition" width="250" height="350">
@@ -165,3 +165,7 @@ Note: Use Python version: 3.8.5
   python Gesture_Controller.py
   ```
   
+  ## Team
+  1. Manya Mishra (Roll No: 1805210026, <a href="https://www.linkedin.com/in/manya-mishra-72420a193/" target="_blank">LinkedIn</a>)
+  2. Roopam Mishra (Roll No: 1805210045, <a href="https://www.linkedin.com/in/roopammishra/" target="_blank">LinkedIn</a>)
+  3. Sonali Singh (Roll No: 1805210055, <a href="https://www.linkedin.com/in/sonali-singh-16m/" target="_blank">LinkedIn</a>)
