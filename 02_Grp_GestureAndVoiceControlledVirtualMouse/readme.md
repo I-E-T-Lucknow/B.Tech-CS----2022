@@ -93,16 +93,16 @@ Note: Use Python version: 3.8.5
 <summary>Copy and Paste</summary>
 <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p13.jpeg" alt="proton list files" width="250" height="auto">
  <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p14.jpeg" alt="proton open" width="250" height="auto">
- <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p15.jpeg" alt="proton go back" width="250" height="auto"><br>
 </details>
 
 <details>
 <summary>Find a Location on Google Maps</summary>
-<img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p16.jpeg" alt="proton date / time" width="250" height="auto"><br>
+  <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p15.jpeg" alt="proton go back" width="250" height="auto"><br>
 </details>
 
 <details>
 <summary>File Navigation</summary>
+ <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p16.jpeg" alt="proton date / time" width="250" height="auto"><br>
  <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p17.jpeg" alt="proton copy" width="500" height="auto">
  <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p18.jpeg" alt="proton paste" width="500" height="auto"><br>
 </details>
