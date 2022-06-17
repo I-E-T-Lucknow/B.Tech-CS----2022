@@ -10,7 +10,7 @@ Note: Use Python version: 3.8.5
 <details>
 <summary>Neutral Gesture</summary>
  <figure>
-  <img src="" alt="Palm" width="711" height="400"><br>
+  <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p3.png" alt="Palm" width="200" height="200"><br>
   <figcaption>Neutral Gesture. Used to halt/stop execution of current gesture.</figcaption>
 </figure>
 </details>
@@ -18,62 +18,65 @@ Note: Use Python version: 3.8.5
 
 <details>
 <summary>Move Cursor</summary>
-  <img src="" alt="Move Cursor" width="711" height="400"><br>
+  <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p5.png" alt="Move Cursor" width="200" height="200"><br>
   <figcaption>Cursor is assigned to the midpoint of index and middle fingertips. This gesture moves the cursor to the desired location. Speed of the cursor movement is proportional to the speed of hand.</figcaption>
 </details>
 
 <details>
 <summary>Left Click</summary>
-<img src="" alt="Left Click" width="711" height="400"><br>
+<img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p4.png" alt="Left Click" width="200" height="200"><br>
  <figcaption>Gesture for single left click</figcaption>
 </details>
 
 <details>
 <summary>Right Click</summary>
-<img src="" alt="Right Click" width="711" height="400"><br>
+<img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p6.png" alt="Right Click" width="200" height="200"><br>
  <figcaption>Gesture for single right click</figcaption>
 </details>
 
 <details>
 <summary>Double Click</summary>
-<img src="" alt="Double Click" width="711" height="400"><br>
+<img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p8.png" alt="Double Click" width="200" height="200"><br>
  <figcaption>Gesture for double click</figcaption>
 </details>
 
 <details>
 <summary>Scrolling</summary>
-<img src="" alt="Scrolling" width="711" height="400"><br>
+<img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p1.png" alt="Scrolling" width="200" height="200"><br>
  <figcaption>Dynamic Gestures for horizontal and vertical scroll. The speed of scroll is proportional to the distance moved by pinch gesture from start point. Vertical and Horizontal scrolls are controlled by vertical and horizontal pinch movements respectively.</figcaption>
 </details>
 
 <details>
 <summary>Drag and Drop</summary>
-<img src="" alt="Drag and Drop" width="711" height="400"><br>
+<img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p7.png" alt="Drag and Drop" width="200" height="200">
+<img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p3.png" alt="Drag and Drop" width="200" height="200"><br>
  <figcaption>Gesture for drag and drop functionality. Can be used to move/tranfer files from one directory to other.</figcaption>
 </details>
 
 <details>
 <summary>Multiple Item Selection</summary>
-<img src="" alt="Multiple Item Selection" width="711" height="400"><br>
+<img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p3.png" alt="Drag and Drop" width="200" height="200">
+<img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p7.png" alt="Drag and Drop" width="200" height="200">
+ <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p3.png" alt="Drag and Drop" width="200" height="200"><br>
  <figcaption>Gesture to select multiple items</figcaption>
 </details>
 
 <details>
 <summary>Volume Control</summary>
-<img src="" alt="Volume Control" width="711" height="400"><br>
+<img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p9.png" alt="Volume Control" width="200" height="200"><br>
  <figcaption>Dynamic Gestures for Volume control. The rate of increase/decrease of volume is proportional to the distance moved by pinch gesture from start point. </figcaption>
 </details>
 
 <details>
 <summary>Brightness Control</summary>
-<img src="" alt="Brightness Control" width="711" height="400"><br>
+<img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p9.png" alt= "Brightness Control" width="200" height="200"><br>
  <figcaption>Dynamic Gestures for Brightness control. The rate of increase/decrease of brightness is proportional to the distance moved by pinch gesture from start point. </figcaption>
 </details>
 
 ### Voice Assistant ( ***Proton*** ):
 <details>
 <summary>Launch / Stop  Gesture Recognition</summary>
-<img src="" alt="launch stop gesture recognition" width="250" height="auto">
+<img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p3.png" alt="launch stop gesture recognition" width="auto" height="auto">
 <ul>
   <li>
     <code> Proton Launch Gesture Recognition </code><br>
@@ -89,7 +92,7 @@ Note: Use Python version: 3.8.5
 
 <details>
 <summary>Google Search</summary>
-<img src="" alt="proton search github" width="800" height="auto">
+<img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p3.png" alt="proton search github" width="800" height="auto">
 <ul>
   <li>
     <code>Proton search {text_you_wish_to_search}</code><br>
@@ -100,7 +103,7 @@ Note: Use Python version: 3.8.5
 
 <details>
 <summary>Find a Location on Google Maps</summary>
- <img src="" alt="proton find location" width="800" height="auto">
+ <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p3.png" alt="proton find location" width="800" height="auto">
   <ol>
     <li> 
       <code>Proton Find a Location</code><br>
@@ -115,9 +118,9 @@ Note: Use Python version: 3.8.5
 
 <details>
 <summary>File Navigation</summary>
-<img src="" alt="proton list files" width="250" height="auto">&emsp;
- <img src="" alt="proton open" width="250" height="auto">&emsp;
- <img src="" alt="proton go back" width="250" height="auto">
+<img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p3.png" alt="proton list files" width="250" height="auto">&emsp;
+ <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p3.png" alt="proton open" width="250" height="auto">&emsp;
+ <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p3.png" alt="proton go back" width="250" height="auto">
   <ul>
     <li>
       <code>Proton list files</code> / <code> Proton list </code><br>
@@ -136,7 +139,7 @@ Note: Use Python version: 3.8.5
 
 <details>
 <summary>Current Date and Time</summary>
-<img src="" alt="proton date / time" width="250" height="auto">
+<img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p3.png" alt="proton date / time" width="250" height="auto">
   <ul>
     <li>
       <code> Proton what is today's date </code> / <code> Proton date </code><br>
@@ -148,8 +151,8 @@ Note: Use Python version: 3.8.5
 
 <details>
 <summary>Copy and Paste</summary>
- <img src="" alt="proton copy" width="500" height="auto">
- <img src="" alt="proton paste" width="500" height="auto">
+ <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p3.png" alt="proton copy" width="500" height="auto">
+ <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p3.png" alt="proton paste" width="500" height="auto">
   <ul>
     <li>
       <code> Proton Copy </code><br>
@@ -164,7 +167,7 @@ Note: Use Python version: 3.8.5
 
 <details>
 <summary>Sleep / Wake up Proton</summary>
-  <img src="" alt="proton sleep / wake up" width="250" height="auto">
+  <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p3.png" alt="proton sleep / wake up" width="250" height="auto">
   <ul>
     <li>
       Sleep<br>
@@ -181,7 +184,7 @@ Note: Use Python version: 3.8.5
 
 <details>
 <summary>Exit</summary>
-   <img src="" alt="proton exit" width="250" height="auto">
+   <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p3.png" alt="proton exit" width="250" height="auto">
   <ul>
     <li>
       <code> Proton Exit </code> <br>
