@@ -108,7 +108,7 @@ Note: Use Python version: 3.8.5
 </details>
 
 <details>
-<summary>Sleep / Wake up Proton</summary>
+<summary>Sleep / Wake up Jerry</summary>
   <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p19.jpeg" alt="proton sleep / wake up"  width="250" height="350">
 </details>
 
