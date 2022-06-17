@@ -134,7 +134,7 @@ Note: Use Python version: 3.8.5
       <code>Proton go back </code> / <code> Proton back </code><br>
       Changes the Current Directory to Parent Directory and lists the files.
     </li>
-  </ul>
+  </ul> 
 </details>
 
 <details>
