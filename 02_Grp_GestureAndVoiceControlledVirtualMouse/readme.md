@@ -157,19 +157,10 @@ Note: Use Python version: 3.8.5
   ``` 
   cd to the GitHub Repo till src folder
   ```
-  Command may look like: `cd C:\Users\.....\Gesture-Controlled-Virtual-Mouse\src`
   
   Step 6:
   
-  For running Voice Assistant:
-  ```bash 
-  python Proton.py
-  ```
-  ( You can enable Gesture Recognition by using the command "Proton Launch Gesture Recognition" )
-  
-  Or to run only Gesture Recognition without the voice assisstant:
-  
-  Uncomment last 2 lines of Code in the file `Gesture_Controller.py`
+  For running Gesture Controller:
   ```bash 
   python Gesture_Controller.py
   ```
