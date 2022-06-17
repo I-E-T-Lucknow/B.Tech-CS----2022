@@ -165,3 +165,8 @@ Note: Use Python version: 3.8.5
   python Gesture_Controller.py
   ```
   
+   ## Team
+  1. Manya Mishra (Roll No: 1805210026, <a href="https://www.linkedin.com/in/manya-mishra-72420a193/" target="_blank">LinkedIn</a>)
+  2. Roopam Mishra (Roll No: 1805210045, <a href="https://www.linkedin.com/in/roopammishra/" target="_blank">LinkedIn</a>)
+  3. Sonali Singh (Roll No: 1805210055, <a href="https://www.linkedin.com/in/sonali-singh-16m/" target="_blank">LinkedIn</a>)
+  
