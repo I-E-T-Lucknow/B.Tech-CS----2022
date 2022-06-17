@@ -1,0 +1,317 @@
+* {
+   margin: 0px;
+   padding: 0px;
+   font-family: sans-serif;
+}
+
+div.convFormDynamic {
+    width: calc(100% - 33px);
+    margin: 10px auto 15px;
+    padding: 0 !important;
+    position: relative;
+    /* box-shadow: 0 0 5px 5px rgba(222, 222, 222, 0.4); */
+}
+
+div.convFormDynamic input.userInputDynamic {
+    border: none;
+    padding: 6px 6px;
+    outline: none;
+    font-size: 0.905rem;
+    float: left;
+    width: 72%;
+    height: 25%;
+    line-height: 1.3em;
+    min-height: 1.7em;
+    max-height: 10rem;
+    display: block;
+    max-width: 72%;
+    margin-right: 2.5%;
+}
+div.conv-form-wrapper:after {
+    content: '';
+    display: block;
+    clear: both;
+    width: 100%;
+    height: 1px;
+}
+div.conv-form-wrapper div#messages {
+    max-height: 71vh;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: auto !important;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none; /* IE 11 */
+}
+div.conv-form-wrapper * {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+div.conv-form-wrapper div#messages:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+div.conv-form-wrapper {
+    position: relative;
+}
+div.conv-form-wrapper div.wrapper-messages {
+    position: relative;
+    height: 600px;
+    overflow-y: scroll;
+    transition: margin 0.1s;
+}
+div.conv-form-wrapper:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    display: block;
+    height: 10px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(#000000, transparent);
+}
+@media (max-width: 767px) {
+    div.conv-form-wrapper div.wrapper-messages, div.conv-form-wrapper div#messages {
+        max-height: 71vh;
+    }
+}
+
+div.conv-form-wrapper div.wrapper-messages::-webkit-scrollbar, div#feed ul::-webkit-scrollbar, div.conv-form-wrapper div.options::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    /* remove scrollbar space */
+    background: transparent;
+    /* optional: just make scrollbar invisible */
+}
+
+input.userInputDynamic.error {
+    color: #ac0000 !important;
+}
+input.userInputDynamic {
+    border-radius: 3px;
+    margin: 7px 10px;
+}
+
+div.conv-form-wrapper div#messages {
+    position: relative;
+    bottom: 0;
+    margin-left: -5px;
+    height: auto !important;
+    width: 97%;
+    padding-bottom: 20px;
+}
+div.conv-form-wrapper div.options {
+    word-wrap: normal;
+    white-space: nowrap;
+    overflow-x: scroll;
+    position: absolute;
+    bottom: 100%;
+    width: 100%;
+    transform: translateY(-5px);
+}
+
+div.conv-form-wrapper div.message:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+div.conv-form-wrapper  div.message.ready.rtol {
+    animation: slideRtoLIn 0.5s ease;
+    transform-origin: 0 0 0;
+}
+div.conv-form-wrapper div.message.ready.ltor {
+    animation: slideLtoRIn 0.5s ease;
+    transform-origin: 0 0 0;
+}
+div.conv-form-wrapper  div#messages div.message {
+    border-radius: 20px;
+    padding: 12px 22px;
+    font-size: 0.905rem;
+    color: #333;
+    display: inline-block;
+    padding: 10px 15px 8px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    float: right;
+    clear: both;
+    max-width: 65%;
+    word-wrap: break-word;
+}
+div.conv-form-wrapper  div#messages div.message.to {
+    background: linear-gradient(to right, #388eff 29%, #70aeff 81%);
+    color: #fff;
+    float: left;
+    border-top-left-radius: 0;
+}
+div.conv-form-wrapper div#messages div.message.from {
+    background: linear-gradient(to left, #38ff84 0%, #98fbbe 100%);
+    color: #000000;
+    border-top-right-radius: 0;
+}
+.message.to+.message.from, .message.from+.message.to {
+    margin-top: 15px;
+}
+@keyframes slideRtoLIn {
+    0% {
+        margin-right: -50px;
+    }
+
+    100% {
+        margin-right: 0px;
+    }
+}
+@keyframes slideLtoRIn {
+    0% {
+        margin-left: -50px;
+    }
+
+    100% {
+        margin-left: 0;
+    }
+}
+
+div.convFormDynamic button.submit {
+    padding: 3px;
+    border: none;
+    float: left;
+    margin: 5px;
+    color: #06c5a6;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    width: 36px;
+    height: 35px;
+    margin-top: 8px;
+    background: #fff;
+    outline: none !important;
+}
+
+
+div.convFormDynamic button.submit:hover {
+    background: #06b79a;
+    color: #fff;
+}
+
+button.submit.glow {
+    box-shadow: 0 0 10px 5px rgba(6, 197, 166, 0.4);
+}
+.no-border {
+    border: none !important;
+}
+.dragscroll {
+    cursor: grab;
+}
+div.conv-form-wrapper div#messages::-webkit-scrollbar, div#feed ul::-webkit-scrollbar {
+    width: 0px;
+    /* remove scrollbar space */
+    background: transparent;
+    /* optional: just make scrollbar invisible */
+}
+span.clear {
+    display: block;
+    clear: both;
+}
+
+
+.header-wrapper {
+  background-color: #000000;
+  color: white;
+  width: auto;
+  height: 20px;
+  top: 0px;
+  left: 0px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 25px;
+  padding-right: 20px;
+  text-align: right;
+}
+.logo{
+	position: fixed;
+    top: 0px;
+	left: 5%;
+	padding: 10px;
+    padding-bottom: 20px;
+}
+
+body {
+    overflow: hidden;
+    background: #1a1a2e;
+}
+
+
+.awesome {
+
+  font-family: futura;
+
+  width:100%;
+  margin-top: 12px;
+  margin-left: 12px;
+  text-align: center;
+
+  color:#313131;
+  font-size:16px;
+  font-weight: bold;
+  position: absolute;
+  -webkit-animation:colorchange 20s infinite alternate;
+
+
+}
+
+@-webkit-keyframes colorchange {
+  0% {
+
+    color: lightblue;
+  }
+
+  10% {
+
+    color: #8e44ad;
+  }
+
+  20% {
+
+    color: #1abc9c;
+  }
+
+  30% {
+
+    color: #7afad8;
+  }
+
+  40% {
+
+    color: lightblue;
+  }
+
+  50% {
+
+    color: #70b8ff;
+  }
+
+  60% {
+
+    color: lightblue;
+  }
+
+  70% {
+
+    color: #2980b9;
+  }
+  80% {
+
+    color: #67d962;
+  }
+
+  90% {
+
+    color: #62c7d9;
+  }
+
+  100% {
+
+    color: #9ee84f;
+  }
+}

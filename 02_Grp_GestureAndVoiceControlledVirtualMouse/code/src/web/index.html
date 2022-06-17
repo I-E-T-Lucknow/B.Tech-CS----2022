@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jerry</title>
+    <script type="text/javascript" src="/eel.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery.convform.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class = "header-wrapper">
+          <p class="awesome">Jerry Welcomes you!</p>
+            <div class = "logo">
+                <img src= "images/icon.png"  width="35" height="33">
+            </div>
+        </div>
+    </header>
+    <!-- ChatBot -->
+    <div class="chat_icon">
+        <i class="fa fa-comments" aria-hidden="true"></i>
+    </div>
+
+    <div class="chat_box">
+        
+            <div class="conv-form-wrapper" style="height:auto;">
+                <div id="messages" style="overflow-y:auto;height:400px;">
+                    </br></br>                    
+                </div>
+            </div>
+            
+            <div id="convForm" class="convFormDynamic" style="height:50px;position:absolute;left:10px;bottom:0px;margin:5px;">
+                <div class="options dragscroll"></div>
+                <input type="text" id="userInput" placeholder="Type Here" class="userInputDynamic" style="margin: 7px 7.575px 7px 10px; width: 219px; height: 24px;">
+                <button id="userInputButton" type="button" class="submit" style="margin-top:9px">▶</button>
+                <span class="clear"></span>
+            </div>
+
+        </div>
+    
+</body>
+    <script type="text/javascript" src="js/main.js"></script>
+</html>
