@@ -76,7 +76,7 @@ Note: Use Python version: 3.8.5
 ### Voice Assistant ( ***Proton*** ):
 <details>
 <summary>Launch / Stop  Gesture Recognition</summary>
-<img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p10.jpeg" alt="launch stop gesture recognition" width="auto" height="auto">
+<img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p10.jpeg" alt="launch stop gesture recognition" width="400" height="600">
 </details>
 
 <details>
@@ -86,35 +86,35 @@ Note: Use Python version: 3.8.5
 
 <details>
 <summary>Current Date and Time</summary>
- <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p12.jpeg" alt="proton find location" width="800" height="auto">
+ <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p12.jpeg" alt="proton find location" width="400" height="600">
 </details>
 
 <details>
 <summary>Copy and Paste</summary>
-<img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p13.jpeg" alt="proton list files" width="250" height="auto">
- <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p14.jpeg" alt="proton open" width="250" height="auto">
+<img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p13.jpeg" alt="proton list files" width="500" height="auto">
+ <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p14.jpeg" alt="proton open" width="500" height="auto">
 </details>
 
 <details>
 <summary>Find a Location on Google Maps</summary>
-  <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p15.jpeg" alt="proton go back" width="250" height="auto"><br>
+  <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p15.jpeg" alt="proton go back" width="800" height="auto"><br>
 </details>
 
 <details>
 <summary>File Navigation</summary>
- <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p16.jpeg" alt="proton date / time" width="250" height="auto"><br>
- <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p17.jpeg" alt="proton copy" width="500" height="auto">
- <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p18.jpeg" alt="proton paste" width="500" height="auto"><br>
+ <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p16.jpeg" alt="proton date / time" width="400" height="600">
+ <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p17.jpeg" alt="proton copy"  width="400" height="600">
+ <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p18.jpeg" alt="proton paste"  width="400" height="600"><br>
 </details>
 
 <details>
 <summary>Sleep / Wake up Proton</summary>
-  <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p19.jpeg" alt="proton sleep / wake up" width="250" height="auto">
+  <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p19.jpeg" alt="proton sleep / wake up"  width="400" height="600">
 </details>
 
 <details>
 <summary>Exit</summary>
-   <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p20.jpeg" alt="proton exit" width="250" height="auto">
+   <img src="https://github.com/sonalisingh18/B.Tech-CS----2022/blob/main/02_Grp_GestureAndVoiceControlledVirtualMouse/code/Media_files/p20.jpeg" alt="proton exit" width="400" height="600">
 </details>
 
 # Getting Started
@@ -164,9 +164,4 @@ Note: Use Python version: 3.8.5
   ```bash 
   python Gesture_Controller.py
   ```
-  
-   ## Team
-  1. Manya Mishra (Roll No: 1805210026, <a href="https://www.linkedin.com/in/manya-mishra-72420a193/" target="_blank">LinkedIn</a>)
-  2. Roopam Mishra (Roll No: 1805210045, <a href="https://www.linkedin.com/in/roopammishra/" target="_blank">LinkedIn</a>)
-  3. Sonali Singh (Roll No: 1805210055, <a href="https://www.linkedin.com/in/sonali-singh-16m/" target="_blank">LinkedIn</a>)
   
