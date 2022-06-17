@@ -1,0 +1,80 @@
+{
+	"data" : [
+		{
+			"name" : "Navin Chandra",
+			"contact": "+919335494254",
+			"mail": "1805210027@ietlucknow.ac.in"
+		},
+		{
+			"name" : "Tushar Giri",
+			"contact": "+918299763499",
+			"mail": "inazuma928@gmail.com"
+		},
+		{
+			"name" : "Arnab Debnath",
+			"contact": "9664248583",
+			"mail": "1805210011@ietlucknow.ac.in"
+		},
+		{
+			"name": "Dr. Pawan Kumar Tiwari",
+			"contact": "8130274254",
+			"mail": "pawantiwari@ietlucknow.ac.in"
+		},
+		{
+			"name": "Dr. Upendra Kumar",
+			"contact": "9415452072",
+			"mail": "ukumar@ietlucknow.ac.in"
+		},
+		{
+			"name": "Dr. Divakar Singh Yadav",
+			"contact": "9454382845",
+			"mail": "dsyadav@ietlucknow.ac.in"
+		},
+		{
+			"name": "Abhishek Singh",
+			"contact": "7905645286",
+			"mail": "asingh.csed.cf@ietlucknow.ac.in"
+		},
+		{
+			"name": "Deepali Avasthi",
+			"contact": "9415578425",
+			"mail": "davasthi.csed.cf@ietlucknow.ac.in"
+		},
+		{
+			"name": "Dr. Jasvant Kumar",
+			"contact": "9140738670",
+			"mail": "jkumar.csed.cf@ietlucknow.ac.in"
+		},
+		{
+			"name": "Dr. Tulika Narang",
+			"contact": "9415647731",
+			"mail": "tnarang.csed.cf@ietlucknow.ac.in"
+		},
+		{
+			"name": "Dr. Promila Bahadur",
+			"contact": "7607703366",
+			"mail": "pbahadur.csed.cf@ietlucknow.ac.in"
+		},
+		{
+			"name": "Dr. Vineet Kansal",
+			"contact": "",
+			"mail": "vineetkansal@ietlucknow.ac.in"
+		},
+		{
+			"name": "Satish Shriwas",
+			"contact": "7704990668",
+			"mail": "1805210046@ietlucknow.ac.in"
+		},
+		{
+			"name": "Himanshu Verma",
+			"contact": "9125841136",
+			"mail": "1805210022@ietlucknow.ac.in"
+		},
+		{
+			"name": "Ashutosh Kumar",
+			"contact": "8707046409",
+			"mail": "1805210013@ietlucknow.ac.in"
+		}
+
+	]
+}
