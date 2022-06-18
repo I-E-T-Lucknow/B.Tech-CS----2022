@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+	<title>Logged in as... {{username}}</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../static/form-static/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/form-static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="../static/form-static/css/main.css">
+	<link rel="stylesheet" href="../static/css/style.css">
+	<style>
+		.vl {
+			border-left: 2px solid skyblue;
+			height: 150%;
+		}
+		</style>
+</head>
+<body class="body3">
+	<br>
+	<center>
+		<h5 class="result_dec_header">{{subjectname}} | Analysis</h5>
+		<br>
+		<h5>{{topicname}}</h5>
+		<br>
+	</center>
+	<div class="contact1new-ultra">
+		<div class="row">
+			<div class="col result_dec">
+				<center>
+				<span>YOUR SCORE : <h5 id="fs" class="h1_beta">{{show_score}} %</h5></span>
+				</center>
+			</div>
+			{{status}}
+			<div class="vl"></div>
+			<div class="col">
+				<span><h3 style="color: aquamarine; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">MAX SCORE : {{max_score}}</h3></span>
+				<br>
+				<span><h4 style="color: orange; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">MEAN SCORE : {{mean_score}}</h4></span>
+				<br>
+				<span><h5 style="color: navy">MIN SCORE : {{min_score}}</h5></span>
+			</div>
+		</div>	
+	</div>
+	<br>
+	<center>
+		<div class="container-contact1-form-btn">
+			<a href="/" class="contact1-form-newbtn">Log Out</a>
+		</div>
+	</center>
+</body>
+</html>
+
+	<script>
+		var font_s = {{show_score}};
+		if (font_s < 55){
+			document.getElementById("fs").style.color="red";
+		}
+		else{
+			font_s += "px";
+			document.getElementById("fs").style.fontSize=font_s;
+		}
+	</script>
