@@ -1,0 +1,92 @@
+﻿<html lang="en">
+<head>
+	<title>Automate the examination system</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../static/form-static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="../static/form-static/css/main.css">
+	<link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body class="body2">
+	<div class="head-space">
+		<h5>Logged in as.. {{username}}</h5>
+	</div>
+	<div class="contact1 myownfont" style="box-shadow: 5px 8px 32px rgb(255, 94, 0);">
+		<div class="contact1-pic js-tilt" data-tilt>
+			<img src="../static/images/quote.png" alt="IMG">
+		</div>
+		<form style="color:white" class="contact1-form validate-form" action="/generate_test" method="POST" enctype="multipart/form-data">
+			<div class="wrap-input1 validate-input" data-validate="">
+				Select Test Type : 
+				<span>
+					<input type="radio" name="test_id" value="0">Objective Test
+					<input type="radio" name="test_id" value="1">Subjective Test
+				</span>
+			</div>
+			<div class="wrap-input1 validate-input" data-validate="">
+				Select Subject : <br>
+				<blockquote style="padding-left: 50px">
+					<input type="radio" name="subject_id" value="0" id="myCheck4" onclick="myFunction2()">Software Testing<br>
+					<input type="radio" name="subject_id" value="1" id="myCheck3" onclick="myFunction2()">Database System<br>
+					<input type="radio" name="subject_id" value="2" id="myCheck2" onclick="myFunction2()">Machine Learning<br>
+					<input type="radio" name="subject_id" value="99" id="myCheck" onclick="myFunction()"> Create Custom Test
+				</blockquote>
+			</div>
+			<div id="file_br" class="wrap-input1 validate-input" data-validate="Test file is required" style="display:none">
+				<input type="file" name="file" />
+			</div>
+			<div class="container-contact1-form-btn">
+				<button class="contact1-form-newbtn">
+					<span>Take Test<i class="" aria-hidden="true"></i></span>
+				</button>
+				<a href="/" class="contact1-form-newbtn-home">Home</a>
+			</div>
+		</form>
+	</div>
+</body>
+
+	<!-- JavaScript -->
+    <script >
+			$('.js-tilt').tilt({
+				scale: 1.1
+			})
+		
+		function formHandler(){
+			// event handler to handle the name field
+			var nameField = document.getElementById("testname");
+			nameField.onfocus = function(){
+				if(nameField.placeholder == "Test Name"){
+					nameField.placeholder = "";
+				}
+			};
+			nameField.onblur = function(){
+				if(nameField.placeholder == ""){
+					nameField.placeholder = "Test Name";
+				}
+			};
+		}
+		// call fucntion after the window has loaded
+		window.onload = function(){
+			formHandler();
+		}
+	</script>
+	<script>
+		function myFunction() {
+			var checkBox = document.getElementById("myCheck");
+			if (checkBox.checked == true){
+				document.getElementById("file_br").style.display="block";
+			}
+		}
+	</script>
+	<script>
+			function myFunction2() {
+				var checkBox2 = document.getElementById("myCheck2");
+				var checkBox3 = document.getElementById("myCheck3");
+				var checkBox4 = document.getElementById("myCheck4");
+				
+				if (checkBox2.checked == true || checkBox3.checked == true || checkBox4.checked == true){
+					document.getElementById("file_br").style.display="none";
+				}
+			}
+		</script>
+</html>
