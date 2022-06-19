@@ -1,0 +1,99 @@
+{% extends 'homeheader.html'%}
+{% block content %}
+
+<section class="w3l-contacts-12" id="contact">
+    <div class="contact-top pt-5">
+        <center><h3>Lets Predict:</h3></center>
+        <div class="container py-md-3">
+            
+            <div class="row cont-main-top">
+                <div class="contacts12-main col-lg-8 mt-lg-0 mt-5">
+                                
+                    <form action="/blockchain1" method="post" class="main-input">
+                        <div class="top-inputs d-grid">
+                            <!-- <label>Enter Target Exchange:</label>
+                          
+                            <!-- <center><input type="text" placeholder="Enter Target Exchange" name="exchange" id="w3lName" required=""></center> -->
+                            
+                             
+                            <!-- <center><input type="text" placeholder="Enter Family" name="family" id="w3lName" required=""></center> -->
+                            <label>Enter Average min between sent Transaction:</label>
+                            <center><input type="text" placeholder="Enter Average min between sent Transaction" name="avgminsent" id="w3lName" required=""></center>
+                            <label>Enter Average min between received Transaction:</label>
+                            <center><input type="text" placeholder="Enter Average min between received Transaction" name="avgminreceived" id="w3lName" required=""></center>
+                            <label>Enter Time Difference between first and last (Mins):</label>
+                            <center><input type="text" placeholder="Enter Time Difference between first and last (Mins)" name="timediffmin" id="w3lName" required=""></center>
+                            <label>Enter Sent Transaction:</label>
+                            <center><input type="text" placeholder="Enter Sent Transaction" name="senttransaction" id="w3lName" required=""></center>
+                            <label>Enter Received Transaction:</label>
+                            <center><input type="text" placeholder="Enter Received Transaction" name="receivetransaction" id="w3lName" required=""></center>
+                            <label>Enter Number of Created Contracts:</label>
+                            <center><input type="text" placeholder="Enter Number of Created Contracts" name="createdcontracts" id="w3lName" required=""></center>
+                            <label>Enter Unique Received From Addresses:</label>
+                            <center><input type="text" placeholder="Enter Unique Received From Addresses" name="receiveaddress" id="w3lName" required=""></center>
+                            <label>Enter Unique Sent To Addresses:</label>
+                            <center><input type="text" placeholder="Enter Unique Sent To Addresses" name="sentaddress" id="w3lName" required=""></center>
+                            <label>Enter Min value received:</label>
+                            <center><input type="text" placeholder="Enter Min value received" name="minvaluereceive" id="w3lName" required=""></center>
+                            <label>Enter Max value received:</label>
+                            <center><input type="text" placeholder="Enter Max value received" name="maxvaluereceive" id="w3lName" required=""></center>
+                            <label>Enter Average value received:</label>
+                            <center><input type="text" placeholder="Enter Average value received" name="avgvaluereceive" id="w3lName" required=""></center>
+                            <label>Enter Min value Sent:</label>
+                            <center><input type="text" placeholder="Enter Min value Sent" name="minvaluesent" id="w3lName" required=""></center>
+                            <label>Enter Max value Sent:</label>
+                            <center><input type="text" placeholder="Enter Max value Sent" name="maxvaluesent" id="w3lName" required=""></center>
+                            <label>Enter Avg value Sent:</label>
+                            <center><input type="text" placeholder="Enter Avg value Sent" name="avgvaluesent" id="w3lName" required=""></center>
+                            <label>Enter total transactions (including transaction to create contract):</label>
+                            <center><input type="text" placeholder="Enter total transactions (including transaction to create contract)" name="totaltrans" id="w3lName" required=""></center>
+                            <label>Enter total Ether sent:</label>
+                            <center><input type="text" placeholder="Enter total Ether sent" name="ethersent" id="w3lName" required=""></center>
+                            <label>Enter total ether received:</label>
+                            <center><input type="text" placeholder="Enter total ether received" name="etherreceive" id="w3lName" required=""></center>
+                            <label>Enter total ether balance:</label>
+                            <center><input type="text" placeholder="Enter total ether balance" name="etherbalance" id="w3lName" required=""></center>
+                            <label>Enter Total ERC20 transaction:</label>
+                            <center><input type="text" placeholder="Enter Total ERC20 transaction" name="totaltrans2" id="w3lName" required=""></center>
+                            <label>Enter ERC20 total Ether received:</label>
+                            <center><input type="text" placeholder="Enter ERC20 total Ether received" name="totaletherreceive" id="w3lName" required=""></center>
+                            <label>Enter ERC20 total ether sent:</label>
+                            <center><input type="text" placeholder="Enter ERC20 total ether sent" name="totalethersent" id="w3lName" required=""></center>
+                            <label>Enter ERC20 total Ether sent contract:</label>
+                            <center><input type="text" placeholder="Enter ERC20 total Ether sent contract" name="totalthersentcontract" id="w3lName" required=""></center>
+                            <label>Enter ERC20 unique sent address:</label>
+                            <center><input type="text" placeholder="Enter ERC20 unique sent address" name="uniquesentaddress" id="w3lName" required=""></center>
+                            <label>Enter ERC20 unique receive address:</label>
+                            <center><input type="text" placeholder="Enter ERC20 unique receive address" name="uniquereceiveaddress" id="w3lName" required=""></center>
+                            <label>Enter ERC20 unique sent Contract address:</label>
+                            <center><input type="text" placeholder="Enter ERC20 unique sent Contract address" name="uniquesentcontractaddress" id="w3lName" required=""></center>
+                            <label>Enter ERC20 unique receice contract address:</label>
+                            <center><input type="text" placeholder="Enter ERC20 unique receice contract address" name="uniquereceivecontractaddress" id="w3lName" required=""></center>
+                            <label>Enter ERC20 min val receive:</label>
+                            <center><input type="text" placeholder="Enter ERC20 min val receive" name="minvaluereceive2" id="w3lName" required=""></center>
+                            <label>Enter ERC20 unique sent token Value:</label>
+                            <center><input type="text" placeholder="Enter ERC20 unique sent token Value" name="uniquesenttokenname" id="w3lName" required=""></center>
+
+                
+                        
+                            
+                         </div>
+                        <!-- <textarea placeholder="Message" name="w3lMessage" id="w3lMessage" required=""></textarea> -->
+                        <br>
+                   
+                       
+
+                        <div class="text-right">
+                            <button type="submit" class="btn btn-theme2"> Predict</button>
+                        </div>
+                        <br>
+                        {% for message in get_flashed_messages() %}
+                        <div class="alert alert-success" role="alert">
+                            <div class="flash contact-input">{{ message }}</div>
+                          </div>
+                        {% endfor %}
+                    </form>
+                </div>
+</section>
+
+{% endblock %}

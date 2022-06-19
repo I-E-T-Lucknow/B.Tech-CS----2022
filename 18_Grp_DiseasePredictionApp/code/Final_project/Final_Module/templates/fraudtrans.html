@@ -1,0 +1,15 @@
+{% extends 'homeheader.html'%}
+{% block content %}
+
+<section class="w3l-contacts-12" id="contact">
+    <div class="contact-top pt-5">
+        <center><h3>Fraud Transaction by You:</h3></center>
+        <div class="container py-md-3">
+            {{ df.to_html(classes="table table-striped table-bordered table-hover table-sm") | safe}}
+            
+        </div>
+                                
+                    
+</section>
+
+{% endblock %}

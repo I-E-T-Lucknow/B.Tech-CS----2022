@@ -1,0 +1,312 @@
+{% extends 'homeheader.html'%}
+{% block content %}
+
+<section class="w3l-contacts-12" id="contact">
+    <div class="contact-top pt-5">
+        <center>
+            <h3>Lets Predict:</h3>
+        </center>
+        <div class="container">
+
+            <div class="row cont-main-top">
+                <div class="contacts12-main col-lg-8 mt-lg-0 mt-5">
+
+                    <form action="/diabeties" method="post" class="main-input">
+                        <div class="top-inputs d-grid">
+
+                            <div>
+                                <Label>What is your Age?</Label>
+                                <input type="text" name="age" placeholder="Age">
+                            </div>
+
+                            <div>
+                                <label>What is your Gender?</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="1" type="radio" name="Gender"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Male
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="0" type="radio" name="Gender"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        Female
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <a href="https://en.wikipedia.org/wiki/Polyuria">Do you have Polyuria?</a>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="1" type="radio" name="Polyuria"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="0" type="radio" name="Polyuria"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <a href="https://en.wikipedia.org/wiki/Polydipsia">Do you have Polydipsia?</a>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="1" type="radio" name="Polydipsia"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="0" type="radio" name="Polydipsia"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <a href="#">Recently do you observe sudden weight loss?</a>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="1" type="radio" name="weight"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="0" type="radio" name="weight"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <a href="#">Do you feel any Weekness?</a>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="1" type="radio" name="Weekness"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="0" type="radio" name="Weekness"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <a href="https://en.wikipedia.org/wiki/Polyphagia">Do you have Polyphagia?</a>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="1" type="radio" name="Polyphagia"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="0" type="radio" name="Polyphagia"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <a href="https://patient.info/sexual-health/vaginal-discharge-female-discharge/vaginal-thrush-yeast-infection">Do you have Genital thrush?</a>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="1" type="radio" name="thrush"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="0" type="radio" name="thrush"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <a href="https://en.wikipedia.org/wiki/Blurred_vision">Do you have Visual blurring?</a>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="1" type="radio" name="blurring"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="0" type="radio" name="blurring"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <a href="https://en.wikipedia.org/wiki/Itch">Do you have Itching?</a>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="1" type="radio" name="Itching"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="0" type="radio" name="Itching"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <a href="https://en.wikipedia.org/wiki/Irritability">Do you have Irritability?</a>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="1" type="radio" name="Irritability"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="0" type="radio" name="Irritability"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <a href="#">Do you have Delayed healing?</a>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="1" type="radio" name="healing"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="0" type="radio" name="healing"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <a href="https://en.wikipedia.org/wiki/Paresis">Do you have Partial paresis?</a>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="1" type="radio" name="paresis"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="0" type="radio" name="paresis"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <a href="#">Do you have Muscle stiffness?</a>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="1" type="radio" name="stiffness"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="0" type="radio" name="stiffness"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <a href="https://en.wikipedia.org/wiki/Hair_loss">Do you have Alopecia?</a>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="1" type="radio" name="Alopecia"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="0" type="radio" name="Alopecia"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label>Do you have Obesity?</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="1" type="radio" name="Obesity"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="0" type="radio" name="Obesity"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+
+                            <!-- <textarea placeholder="Message" name="w3lMessage" id="w3lMessage" required=""></textarea> -->
+                            <br>
+                            <br>
+
+
+                            <div class="text-right">
+                                <button type="submit" class="btn btn-theme2">Predict</button>
+                            </div>
+                            <br>
+                            <br>
+                            {% for message in get_flashed_messages() %}
+                            <div class="alert alert-success" role="alert">
+                                <div class="flash contact-input">{{ message }}</div>
+                            </div>
+                            {% endfor %}
+                    </form>
+                </div>
+</section>
+
+{% endblock %}
