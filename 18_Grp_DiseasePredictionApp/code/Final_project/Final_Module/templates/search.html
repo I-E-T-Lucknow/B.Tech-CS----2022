@@ -1,0 +1,31 @@
+{% extends 'homeheader.html'%}
+{% block content %}
+
+<section class="w3l-contacts-12" id="contact">
+    <div class="contact-top pt-5">
+        <center><h3>Search Caption Here:</h3></center>
+        <div class="container py-md-3">
+            
+            <div class="row cont-main-top">
+                <div class="contacts12-main col-lg-8 mt-lg-0 mt-5">
+                                
+                    <form action="/search" method="post" class="main-input">
+                        
+                
+                        
+                            <label>Search Caption Here:</label>
+                            <input type="text" placeholder="Enter Your URL Here" name="file1" id="w3lName" required="">
+                        
+                        <!-- <textarea placeholder="Message" name="w3lMessage" id="w3lMessage" required=""></textarea> -->
+                        <br>
+                        <br>
+                       
+
+                        <div class="text-right">
+                            <button type="submit" class="btn btn-theme2"> Search</button>
+                        </div>
+                    </form>
+                </div>
+</section>
+
+{% endblock %}

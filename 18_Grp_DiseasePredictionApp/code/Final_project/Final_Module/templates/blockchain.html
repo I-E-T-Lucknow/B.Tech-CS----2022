@@ -1,0 +1,122 @@
+{% extends 'homeheader.html'%}
+{% block content %}
+
+<section class="w3l-contacts-12" id="contact">
+    <div class="contact-top pt-5">
+        <center><h3>Lets Predict:</h3></center>
+        <div class="container py-md-3">
+            
+            <div class="row cont-main-top">
+                <div class="contacts12-main col-lg-8 mt-lg-0 mt-5">
+                                
+                    <form action="/blockchain" method="post" class="main-input">
+                        <div class="top-inputs d-grid">
+                            <label>Enter Target Exchange:</label>
+                          
+                            <!-- <center><input type="text" placeholder="Enter Target Exchange" name="exchange" id="w3lName" required=""></center> -->
+                            <select name="exchange" id="w3lName">
+                                <option value="Binance">Binance</option>
+                                <option value="BitMEX">BitMEX</option>
+                                <option value="BitMax">BitMax</option>
+                                <option value="Bitbay">Bitbay</option>
+                                <option value="Bitfinex">Bitfinex</option>
+                            
+                                <option value="Bitforex">Bitforex</option>
+                                
+                                <option value="Bitmart">Bitmart</option>
+                                <option value="Bitpanda">Bitpanda</option>
+                                <option value="Bitso">Bitso</option>
+                               
+                                <option value="Bittrex">Bittrex</option>
+                              
+                                <option value="Changelly">Changelly</option>
+                               
+                                <option value="Coinbase">Coinbase</option>
+                               
+                                <option value="Coincheck">Coincheck</option>
+                                
+                                <option value="Coinmama">Coinmama</option>
+                                
+                                <option value="Cryptopia">Cryptopia</option>
+                                <option value="Deribit">Deribit</option>
+                               
+                                <option value="Etoro">Etoro</option>
+                                
+                                <option value="Gemini">Gemini</option>
+                                <option value="HitBTC">HitBTC</option>
+                                <option value="Huobi">Huobi</option>
+                                
+                                <option value="Kraken">Kraken</option>
+                                <option value="KuCoin">KuCoin</option>
+                               
+                                <option value="Livecoin">Livecoin</option>
+                                <option value="LocalBitcoins">LocalBitcoins</option>
+                               
+                                <option value="OKEx">OKEx</option>
+                              
+                                <option value="Paxful">Paxful</option>
+                                <option value="Poloniex">Poloniex</option>
+                              
+                                <option value="Wirex">Wirex</option>
+                               
+                                <option value="Yobit">Yobit</option>
+                               
+                                <option value="itBit">itBit</option>
+                              </select>
+                            <label>Enter Family:</label>
+                            <select name="family" id="w3lName">
+                                <option value="bbinance.com">bbinance.com</option>
+                                <option value="bitbai.net">bitbai.net</option>
+                                <option value="bitma.io">bitma.io</option>
+                                <option value="bitpada.com">bitpada.com</option>
+                                <option value="bitpannda.com">bitpannda.com</option>
+                                <option value="coinchecl.com">coinchecl.com</option>
+                                <option value="coinmam.com">coinmam.com</option>
+                                <option value="cryptopea.co.nz">cryptopea.co.nz</option>
+                                <option value="derbiit.com">derbiit.com</option>
+                                <option value="deribiy.com">deribiy.com</option>
+                                <option value="diribit.com">diribit.com</option>
+                                <option value="geemini.com">geemini.com</option>
+                                <option value="huob9.com">huob9.com</option>
+                                <option value="ibtso.com">ibtso.com</option>
+                                <option value="llocalbitcoins.com">llocalbitcoins.com</option>
+                                <option value="local-bitcoins.com">local-bitcoins.com</option>
+                                <option value="localbitcoin.com">localbitcoin.com</option>
+                                <option value="localbitoins.com">localbitoins.com</option>
+                                <option value="okewx.com">okewx.com</option>
+                                <option value="olcalbitcoins.com">olcalbitcoins.com</option>
+                                <option value="paxfulverify.com">paxfulverify.com</option>
+                                <option value="poxful.com">poxful.com</option>
+                                <option value="virexapp.com">virexapp.com</option>
+                                <option value="www.eytoro.com">www.eytoro.com</option>
+                                <option value="yo-bit.net">yo-bit.net</option>
+                               
+                              </select>
+                            <!-- <center><input type="text" placeholder="Enter Family" name="family" id="w3lName" required=""></center> -->
+                            <label>Enter URL:</label>
+                            <center><input type="text" placeholder="Enter Your URL Here" name="url" id="w3lName" required=""></center>
+                            <label>Enter Landing URL:</label>
+                            <center><input type="text" placeholder="Enter Your URL Here" name="landurl" id="w3lName" required=""></center>
+                
+                        
+                            
+                         </div>
+                        <!-- <textarea placeholder="Message" name="w3lMessage" id="w3lMessage" required=""></textarea> -->
+                        <br>
+                   
+                       
+
+                        <div class="text-right">
+                            <button type="submit" class="btn btn-theme2"> Predict</button>
+                        </div>
+                        <br>
+                        {% for message in get_flashed_messages() %}
+                        <div class="alert alert-success" role="alert">
+                            <div class="flash contact-input">{{ message }}</div>
+                          </div>
+                        {% endfor %}
+                    </form>
+                </div>
+</section>
+
+{% endblock %}
