@@ -1,0 +1,3 @@
+This Folder Contains the output produce through webcam -> various Facial Expressions
+
+It contain Accuracy curve as well.
