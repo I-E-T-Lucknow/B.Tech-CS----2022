@@ -1,3 +1,4 @@
+# Attire Fit In &nbsp;
 # Introduction 
 
 The trend of online shopping is increasing. Trying on clothes virtually in these times will allow the customers to get an idea of how the cloth will look on them, which will substantially improve the customer experience. This is heading towards the idea of virtual dress fitting or virtual fitting. Image-based virtual fitting is basically an image generation task that changes a person's garment to another garment specified in another product image.
